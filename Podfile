@@ -11,7 +11,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
-pod 'ConcentricProgressRingView'
+
 
 end
 post_install do |installer|
