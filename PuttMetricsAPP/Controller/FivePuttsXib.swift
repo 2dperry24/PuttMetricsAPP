@@ -11,24 +11,15 @@ import UIKit
 class FivePuttsXib: UIView {
 
     
-    
     @IBOutlet weak var missedPuttBTN: UIButton!
     
-    @IBOutlet weak var madePuttBTN: UIButton!
     
+    @IBOutlet weak var DistanceOfPuttLevelLBL: UILabel!
     
-    @IBOutlet weak var totalPuttCountBTN: UILabel!
+
+    @IBOutlet weak var progressRingViewDisplayBox: UIView!
     
-    @IBOutlet weak var progressRingImageView: UIImageView!
-    
-    @IBOutlet weak var distanceToPuttLevelLBL: UILabel!
-    
-    
-    
-    
-    
-    
-    
+    @IBOutlet weak var totalPuttsTakenLabel: UILabel!
     
     
 }

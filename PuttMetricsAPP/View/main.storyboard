@@ -18,29 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvL-a0-50z">
-                                <rect key="frame" x="0.0" y="-44" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="uxH-MA-fEy"/>
-                                </items>
-                            </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cp-O2-V01">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-eu-Z8D">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="trailing" secondItem="MgN-MG-MWT" secondAttribute="trailing" id="F8W-eg-haE"/>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="height" secondItem="nUZ-uQ-PKc" secondAttribute="height" id="Iy3-BT-kkA"/>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="bottom" secondItem="MgN-MG-MWT" secondAttribute="bottom" id="J2G-SX-fcT"/>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="width" secondItem="nUZ-uQ-PKc" secondAttribute="width" id="Qp9-wU-nUT"/>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="top" secondItem="uvL-a0-50z" secondAttribute="bottom" id="dLf-gX-NqK"/>
-                            <constraint firstItem="6Cp-O2-V01" firstAttribute="leading" secondItem="MgN-MG-MWT" secondAttribute="leading" id="hth-Wx-hAp"/>
+                            <constraint firstItem="qVZ-eu-Z8D" firstAttribute="trailing" secondItem="MgN-MG-MWT" secondAttribute="trailing" id="11b-QM-pDg"/>
+                            <constraint firstItem="qVZ-eu-Z8D" firstAttribute="bottom" secondItem="MgN-MG-MWT" secondAttribute="bottom" id="IF8-Cz-hLQ"/>
+                            <constraint firstItem="qVZ-eu-Z8D" firstAttribute="top" secondItem="nUZ-uQ-PKc" secondAttribute="top" id="c3X-cI-cK0"/>
+                            <constraint firstItem="qVZ-eu-Z8D" firstAttribute="leading" secondItem="MgN-MG-MWT" secondAttribute="leading" id="wLQ-hI-3yr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MgN-MG-MWT"/>
                     </view>
                     <connections>
-                        <outlet property="ProgressRingScrollView" destination="6Cp-O2-V01" id="MSO-ao-zvS"/>
+                        <outlet property="ProgressRingScrollView" destination="qVZ-eu-Z8D" id="hgA-oA-WJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8B-yG-bf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
