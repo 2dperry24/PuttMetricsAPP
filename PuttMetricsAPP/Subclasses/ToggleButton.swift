@@ -52,3 +52,80 @@ class ToggleButton: UIButton {
     }
     
 }
+class RoundedEdgesTallButton: UIButton {
+    
+    
+    var isOn = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initButton()
+    }
+    
+    func initButton() {
+        layer.cornerRadius = frame.size.width/2
+    }
+   
+    
+}
+
+class minusButton: UIButton {
+    
+    
+    var isOn = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initButton()
+    }
+    
+    func initButton() {
+        
+        layer.cornerRadius = frame.size.height/2
+        
+        setTitleColor(UIColor.white, for: .normal)
+      
+    }
+    
+
+}
+
+class additionButton: UIButton {
+    
+    
+    var isOn = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initButton()
+    }
+    
+    func initButton() {
+        
+        layer.cornerRadius = frame.size.height/2
+        
+        setTitleColor(UIColor.white, for: .normal)
+        
+    }
+    
+    
+}
+
+
+
+

@@ -16,10 +16,15 @@ class FivePuttsXib: UIView {
     
     @IBOutlet weak var DistanceOfPuttLevelLBL: UILabel!
     
-
+    @IBOutlet weak var OutsideViewContainerforProgressRing: UIView!
+    
     @IBOutlet weak var progressRingViewDisplayBox: UIView!
     
     @IBOutlet weak var totalPuttsTakenLabel: UILabel!
+    
+    
+    
+    
     
     
 }

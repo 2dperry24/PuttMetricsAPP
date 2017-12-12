@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3D850973829419EDFFBC22E9 /* Pods_PuttMetricsAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3A094F50BDB4707F4453E4 /* Pods_PuttMetricsAPP.framework */; };
+		CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */; };
+		CE1FCEB81FD73C0A002A8263 /* FivetoTheGoodLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */; };
+		CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */; };
+		CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */; };
+		CE1FCEC01FD9A8F7002A8263 /* ResultsTugOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */; };
+		CEB2C48D1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */; };
+		CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */; };
 		CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A891FD333B200EA1414 /* AppDelegate.swift */; };
 		CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A8B1FD333B200EA1414 /* ViewController.swift */; };
 		CEE82A911FD333B200EA1414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A901FD333B200EA1414 /* Assets.xcassets */; };
@@ -23,6 +30,13 @@
 /* Begin PBXFileReference section */
 		0D7106F2E8A4EFE56BEABC6E /* Pods-PuttMetricsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuttMetricsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		30404310E512D0160C3F37A2 /* Pods-PuttMetricsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuttMetricsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP.release.xcconfig"; sourceTree = "<group>"; };
+		CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedEdgesLabels.swift; sourceTree = "<group>"; };
+		CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivetoTheGoodLabels.swift; sourceTree = "<group>"; };
+		CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceScoring.swift; sourceTree = "<group>"; };
+		CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoringArrayForTugOfWar.swift; sourceTree = "<group>"; };
+		CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTugOfWarVC.swift; sourceTree = "<group>"; };
+		CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellResultsPuttOfWarTableViewCell.swift; sourceTree = "<group>"; };
+		CEB2C4B01FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PuttMetricsAPP.xcdatamodel; sourceTree = "<group>"; };
 		CEE82A861FD333B200EA1414 /* PuttMetricsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuttMetricsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE82A891FD333B200EA1414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE82A8B1FD333B200EA1414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +116,8 @@
 		CEE82A9B1FD3350B00EA1414 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */,
+				CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +139,9 @@
 				CEE82A8B1FD333B200EA1414 /* ViewController.swift */,
 				CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */,
 				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
+				CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */,
+				CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */,
+				CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE82A951FD333B200EA1414 /* Info.plist */,
+				CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE82AA41FD3390700EA1414 /* ToggleButton.swift */,
+				CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -257,10 +278,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/ConcentricProgressRingView/ConcentricProgressRingView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -268,10 +287,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ConcentricProgressRingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LionheartExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -288,11 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */,
+				CE1FCEB81FD73C0A002A8263 /* FivetoTheGoodLabels.swift in Sources */,
 				CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */,
 				CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */,
+				CE1FCEC01FD9A8F7002A8263 /* ResultsTugOfWarVC.swift in Sources */,
 				CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */,
 				CEE82AC71FD3C41200EA1414 /* FivePuttsXib.swift in Sources */,
 				CEE82AA51FD3390700EA1414 /* ToggleButton.swift in Sources */,
+				CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */,
+				CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */,
+				CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */,
+				CEB2C48D1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +495,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEB2C4B01FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodel */,
+			);
+			currentVersion = CEB2C4B01FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodel */;
+			path = PuttMetricsAPP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEE82A7E1FD333B200EA1414 /* Project object */;
 }
