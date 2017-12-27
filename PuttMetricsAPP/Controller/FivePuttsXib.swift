@@ -13,18 +13,18 @@ class FivePuttsXib: UIView {
     
     @IBOutlet weak var missedPuttBTN: UIButton!
     
+    @IBOutlet weak var madeBtn: UIButton!
+    
+    
     
     @IBOutlet weak var DistanceOfPuttLevelLBL: UILabel!
     
-    @IBOutlet weak var OutsideViewContainerforProgressRing: UIView!
-    
+  
     @IBOutlet weak var progressRingViewDisplayBox: UIView!
     
     @IBOutlet weak var totalPuttsTakenLabel: UILabel!
     
-    
-    
-    
+
     
     
 }

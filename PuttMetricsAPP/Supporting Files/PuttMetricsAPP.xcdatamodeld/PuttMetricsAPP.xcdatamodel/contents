@@ -42,25 +42,7 @@
     </entity>
     <entity name="TotalScores" representedClassName="TotalScores" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="fifteenFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fifteenFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fiftyFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fiftyFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fortyFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fortyFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fortyFiveFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="fortyFiveFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="tenFootPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="tenFootScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thirtyFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thirtyFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thirtyFiveFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thirtyFiveFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="total" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="twentyFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="twentyFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="twentyFiveFeetPuttTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="twentyFiveFeetScores" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TwentyFeetScores" representedClassName="TwentyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -81,7 +63,7 @@
         <element name="TenFeetScores" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="ThirtyFeetScores" positionX="18" positionY="63" width="128" height="75"/>
         <element name="ThirtyFiveFeetScores" positionX="0" positionY="45" width="128" height="75"/>
-        <element name="TotalScores" positionX="-486" positionY="-9" width="128" height="343"/>
+        <element name="TotalScores" positionX="-486" positionY="-9" width="128" height="75"/>
         <element name="TwentyFeetScores" positionX="-207" positionY="27" width="128" height="75"/>
         <element name="TwentyFiveFeetScores" positionX="-72" positionY="312" width="128" height="75"/>
     </elements>

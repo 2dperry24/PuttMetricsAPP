@@ -10,6 +10,16 @@ import UIKit
 
 class tableViewCellResultsPuttOfWarTableViewCell: UITableViewCell {
 
+    
+    
+    
+    override func awakeFromNib() {
+        self.layoutMargins = UIEdgeInsets.zero
+        self.preservesSuperviewLayoutMargins = false
+    }
+    
+    
+    @IBOutlet weak var imageViewToCreateBorder: UIImageView!
     @IBOutlet weak var awardImage: UIImageView!
     @IBOutlet weak var firstView: UIView!
     

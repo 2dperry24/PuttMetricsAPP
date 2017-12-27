@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TotalScores+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:PuttMetricsAPP.xcodeproj">
    </FileRef>
    <FileRef

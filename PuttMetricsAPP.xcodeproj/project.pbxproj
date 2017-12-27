@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		3D850973829419EDFFBC22E9 /* Pods_PuttMetricsAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3A094F50BDB4707F4453E4 /* Pods_PuttMetricsAPP.framework */; };
 		CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */; };
-		CE1FCEB81FD73C0A002A8263 /* FivetoTheGoodLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */; };
+		CE1FCEB81FD73C0A002A8263 /* PuttOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */; };
 		CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */; };
 		CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */; };
-		CE1FCEC01FD9A8F7002A8263 /* ResultsTugOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */; };
-		CE49148F1FE4888C000B1D2F /* TotalScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49148E1FE4888B000B1D2F /* TotalScores+CoreDataProperties.swift */; };
+		CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */; };
 		CE5302071FE17BBB003CC5B1 /* TenFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */; };
 		CE5302081FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */; };
 		CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */; };
@@ -38,9 +37,18 @@
 		CE5302531FE1B876003CC5B1 /* SixtyFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */; };
 		CE5302541FE1B876003CC5B1 /* FortyFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */; };
 		CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */; };
+		CE5FF6E71FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */; };
 		CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F261FE5F0B300571738 /* icon attributions.swift */; };
+		CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F291FE951A700571738 /* totalScoreCell.swift */; };
+		CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */; };
+		CE968F311FEA484300571738 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F301FEA484300571738 /* DesignableView.swift */; };
+		CE968F331FED92B500571738 /* ProgressRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F321FED92B500571738 /* ProgressRings.swift */; };
+		CE968F351FED997400571738 /* FivePutts.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE968F341FED997400571738 /* FivePutts.xib */; };
 		CEB2C48D1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */; };
 		CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */; };
+		CECBE6D21FF2E357004FD8B0 /* GraphsForTotalScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */; };
+		CECBE6D41FF3147B004FD8B0 /* chartsVCcustomcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */; };
+		CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D51FF3616F004FD8B0 /* Date.swift */; };
 		CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A891FD333B200EA1414 /* AppDelegate.swift */; };
 		CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A8B1FD333B200EA1414 /* ViewController.swift */; };
 		CEE82A911FD333B200EA1414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A901FD333B200EA1414 /* Assets.xcassets */; };
@@ -48,7 +56,6 @@
 		CEE82AA01FD3360B00EA1414 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A9F1FD3360B00EA1414 /* Default-568h@2x.png */; };
 		CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */; };
 		CEE82AA51FD3390700EA1414 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82AA41FD3390700EA1414 /* ToggleButton.swift */; };
-		CEE82AC51FD3C16300EA1414 /* FivePutts.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE82AC41FD3C16300EA1414 /* FivePutts.xib */; };
 		CEE82AC71FD3C41200EA1414 /* FivePuttsXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */; };
 		CEE82AC91FD3F18F00EA1414 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE82AC81FD3F18F00EA1414 /* main.storyboard */; };
 /* End PBXBuildFile section */
@@ -57,38 +64,46 @@
 		0D7106F2E8A4EFE56BEABC6E /* Pods-PuttMetricsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuttMetricsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		30404310E512D0160C3F37A2 /* Pods-PuttMetricsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuttMetricsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP.release.xcconfig"; sourceTree = "<group>"; };
 		CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedEdgesLabels.swift; sourceTree = "<group>"; };
-		CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivetoTheGoodLabels.swift; sourceTree = "<group>"; };
+		CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuttOfWar.swift; sourceTree = "<group>"; };
 		CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceScoring.swift; sourceTree = "<group>"; };
 		CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoringArrayForTugOfWar.swift; sourceTree = "<group>"; };
-		CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTugOfWarVC.swift; sourceTree = "<group>"; };
-		CE49148E1FE4888B000B1D2F /* TotalScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataProperties.swift"; path = "../../TotalScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPuttOfWarVC.swift; sourceTree = "<group>"; };
 		CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TotalScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
-		CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/SixtyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53022F1FE1B871003CC5B1 /* FortyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FortyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302301FE1B871003CC5B1 /* FiftyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FiftyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302311FE1B871003CC5B1 /* TwentyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/TwentyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302321FE1B872003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FiftyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE5302331FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/ThirtyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302341FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/ThirtyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE5302351FE1B872003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FortyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302361FE1B873003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FortyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE5302371FE1B873003CC5B1 /* FifteenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FifteenFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FifteenFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302381FE1B873003CC5B1 /* FiftyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FiftyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302391FE1B873003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/TwentyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53023A1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/ThirtyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53023B1FE1B874003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/TwentyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53023C1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/ThirtyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE53023D1FE1B874003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FifteenFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FifteenFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FiftyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/SixtyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/FortyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/TwentyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/SixtyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53022F1FE1B871003CC5B1 /* FortyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302301FE1B871003CC5B1 /* FiftyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FiftyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302311FE1B871003CC5B1 /* TwentyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302321FE1B872003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FiftyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE5302331FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/ThirtyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302341FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/ThirtyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE5302351FE1B872003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302361FE1B873003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE5302371FE1B873003CC5B1 /* FifteenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FifteenFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FifteenFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302381FE1B873003CC5B1 /* FiftyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FiftyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302391FE1B873003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53023A1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/ThirtyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53023B1FE1B874003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFiveFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53023C1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ThirtyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/ThirtyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE53023D1FE1B874003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FifteenFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FifteenFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FiftyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/SixtyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataProperties.swift"; path = "../../../TotalScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE968F261FE5F0B300571738 /* icon attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "icon attributions.swift"; sourceTree = "<group>"; };
+		CE968F291FE951A700571738 /* totalScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalScoreCell.swift; sourceTree = "<group>"; };
+		CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusExplantion.swift; sourceTree = "<group>"; };
+		CE968F301FEA484300571738 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		CE968F321FED92B500571738 /* ProgressRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRings.swift; sourceTree = "<group>"; };
+		CE968F341FED997400571738 /* FivePutts.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FivePutts.xib; sourceTree = "<group>"; };
 		CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellResultsPuttOfWarTableViewCell.swift; sourceTree = "<group>"; };
 		CEB2C4B01FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PuttMetricsAPP.xcdatamodel; sourceTree = "<group>"; };
+		CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsForTotalScore.swift; sourceTree = "<group>"; };
+		CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartsVCcustomcell.swift; sourceTree = "<group>"; };
+		CECBE6D51FF3616F004FD8B0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CEE82A861FD333B200EA1414 /* PuttMetricsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuttMetricsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE82A891FD333B200EA1414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE82A8B1FD333B200EA1414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +113,6 @@
 		CEE82A9F1FD3360B00EA1414 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePuttsPerLevelGameVC.swift; sourceTree = "<group>"; };
 		CEE82AA41FD3390700EA1414 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
-		CEE82AC41FD3C16300EA1414 /* FivePutts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FivePutts.xib; sourceTree = "<group>"; };
 		CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePuttsXib.swift; sourceTree = "<group>"; };
 		CEE82AC81FD3F18F00EA1414 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		DE3A094F50BDB4707F4453E4 /* Pods_PuttMetricsAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuttMetricsAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +147,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE968F281FE9515900571738 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */,
+				CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */,
+				CE53022F1FE1B871003CC5B1 /* FortyFeetScores+CoreDataClass.swift */,
+				CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */,
+				CE5302331FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift */,
+				CE5302341FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift */,
+				CE53023C1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift */,
+				CE53023A1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift */,
+				CE5302311FE1B871003CC5B1 /* TwentyFeetScores+CoreDataClass.swift */,
+				CE5302391FE1B873003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift */,
+				CE5302371FE1B873003CC5B1 /* FifteenFeetScores+CoreDataClass.swift */,
+				CE53023D1FE1B874003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift */,
+				CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */,
+				CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */,
+				CE5302351FE1B872003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift */,
+				CE5302361FE1B873003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift */,
+				CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */,
+				CE53023B1FE1B874003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift */,
+				CE5302301FE1B871003CC5B1 /* FiftyFiveFeetScores+CoreDataClass.swift */,
+				CE5302321FE1B872003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift */,
+				CE5302381FE1B873003CC5B1 /* FiftyFeetScores+CoreDataClass.swift */,
+				CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */,
+				CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */,
+				CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */,
+				CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
+		CE968F2F1FEA480F00571738 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				CE968F301FEA484300571738 /* DesignableView.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
 		CEE82A7D1FD333B200EA1414 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +209,7 @@
 		CEE82A881FD333B200EA1414 /* PuttMetricsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				CE968F2F1FEA480F00571738 /* IBDesignables */,
 				CEE82AA31FD338B800EA1414 /* Subclasses */,
 				CEE82A9B1FD3350B00EA1414 /* Model */,
 				CEE82A9C1FD3351D00EA1414 /* View */,
@@ -171,6 +226,9 @@
 				CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */,
 				CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */,
 				CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */,
+				CE968F291FE951A700571738 /* totalScoreCell.swift */,
+				CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */,
+				CECBE6D51FF3616F004FD8B0 /* Date.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,7 +238,7 @@
 			children = (
 				CEE82A921FD333B200EA1414 /* LaunchScreen.storyboard */,
 				CEE82AC81FD3F18F00EA1414 /* main.storyboard */,
-				CEE82AC41FD3C16300EA1414 /* FivePutts.xib */,
+				CE968F341FED997400571738 /* FivePutts.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,8 +250,11 @@
 				CEE82A8B1FD333B200EA1414 /* ViewController.swift */,
 				CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */,
 				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
-				CE1FCEB71FD73C0A002A8263 /* FivetoTheGoodLabels.swift */,
-				CE1FCEBF1FD9A8F7002A8263 /* ResultsTugOfWarVC.swift */,
+				CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */,
+				CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */,
+				CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */,
+				CE968F321FED92B500571738 /* ProgressRings.swift */,
+				CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,31 +262,7 @@
 		CEE82A9E1FD3356900EA1414 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE53022F1FE1B871003CC5B1 /* FortyFeetScores+CoreDataClass.swift */,
-				CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */,
-				CE5302331FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift */,
-				CE5302341FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift */,
-				CE53023C1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift */,
-				CE53023A1FE1B874003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift */,
-				CE5302311FE1B871003CC5B1 /* TwentyFeetScores+CoreDataClass.swift */,
-				CE5302391FE1B873003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift */,
-				CE5302371FE1B873003CC5B1 /* FifteenFeetScores+CoreDataClass.swift */,
-				CE53023D1FE1B874003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift */,
-				CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */,
-				CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */,
-				CE5302351FE1B872003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift */,
-				CE5302361FE1B873003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift */,
-				CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */,
-				CE53023B1FE1B874003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift */,
-				CE5302301FE1B871003CC5B1 /* FiftyFiveFeetScores+CoreDataClass.swift */,
-				CE5302321FE1B872003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift */,
-				CE5302381FE1B873003CC5B1 /* FiftyFeetScores+CoreDataClass.swift */,
-				CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */,
-				CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */,
-				CE49148E1FE4888B000B1D2F /* TotalScores+CoreDataProperties.swift */,
-				CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */,
-				CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */,
-				CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */,
+				CE968F281FE9515900571738 /* coreData */,
 				CEE82A951FD333B200EA1414 /* Info.plist */,
 				CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */,
 				CE968F261FE5F0B300571738 /* icon attributions.swift */,
@@ -305,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE82A941FD333B200EA1414 /* LaunchScreen.storyboard in Resources */,
-				CEE82AC51FD3C16300EA1414 /* FivePutts.xib in Resources */,
+				CE968F351FED997400571738 /* FivePutts.xib in Resources */,
 				CEE82AA01FD3360B00EA1414 /* Default-568h@2x.png in Resources */,
 				CEE82A911FD333B200EA1414 /* Assets.xcassets in Resources */,
 				CEE82AC91FD3F18F00EA1414 /* main.storyboard in Resources */,
@@ -356,8 +393,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/ConcentricProgressRingView/ConcentricProgressRingView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -365,8 +404,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ConcentricProgressRingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LionheartExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -383,28 +424,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECBE6D21FF2E357004FD8B0 /* GraphsForTotalScore.swift in Sources */,
 				CE5302431FE1B876003CC5B1 /* FortyFeetScores+CoreDataClass.swift in Sources */,
 				CE5302541FE1B876003CC5B1 /* FortyFeetScores+CoreDataProperties.swift in Sources */,
 				CE5302441FE1B876003CC5B1 /* FiftyFiveFeetScores+CoreDataClass.swift in Sources */,
+				CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */,
+				CE968F331FED92B500571738 /* ProgressRings.swift in Sources */,
 				CE53024E1FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift in Sources */,
 				CE5302071FE17BBB003CC5B1 /* TenFeetScores+CoreDataProperties.swift in Sources */,
 				CE53024C1FE1B876003CC5B1 /* FiftyFeetScores+CoreDataClass.swift in Sources */,
 				CE5302531FE1B876003CC5B1 /* SixtyFeetScores+CoreDataClass.swift in Sources */,
 				CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */,
-				CE1FCEB81FD73C0A002A8263 /* FivetoTheGoodLabels.swift in Sources */,
+				CE1FCEB81FD73C0A002A8263 /* PuttOfWar.swift in Sources */,
 				CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */,
 				CE53024D1FE1B876003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift in Sources */,
 				CE53024F1FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */,
+				CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */,
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
 				CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */,
-				CE1FCEC01FD9A8F7002A8263 /* ResultsTugOfWarVC.swift in Sources */,
+				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
 				CE5302461FE1B876003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */,
 				CEE82AC71FD3C41200EA1414 /* FivePuttsXib.swift in Sources */,
 				CEE82AA51FD3390700EA1414 /* ToggleButton.swift in Sources */,
 				CE5302511FE1B876003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift in Sources */,
+				CECBE6D41FF3147B004FD8B0 /* chartsVCcustomcell.swift in Sources */,
 				CE5302491FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift in Sources */,
+				CE5FF6E71FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift in Sources */,
+				CE968F311FEA484300571738 /* DesignableView.swift in Sources */,
 				CE5302521FE1B876003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift in Sources */,
 				CE5302451FE1B876003CC5B1 /* TwentyFeetScores+CoreDataClass.swift in Sources */,
 				CE53024A1FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift in Sources */,
@@ -415,8 +463,8 @@
 				CE5302471FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE53024B1FE1B876003CC5B1 /* FifteenFeetScores+CoreDataClass.swift in Sources */,
 				CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */,
+				CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */,
 				CE5302501FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift in Sources */,
-				CE49148F1FE4888C000B1D2F /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */,
 				CE5302481FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */,
@@ -553,6 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25TE3D4ELW;
 				INFOPLIST_FILE = "$(SRCROOT)/PuttMetricsAPP/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.2dperry24.PuttMetricsAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -569,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25TE3D4ELW;
 				INFOPLIST_FILE = "$(SRCROOT)/PuttMetricsAPP/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.2dperry24.PuttMetricsAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
