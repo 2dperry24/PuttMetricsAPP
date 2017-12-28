@@ -14,7 +14,6 @@
 		CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */; };
 		CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */; };
 		CE5302071FE17BBB003CC5B1 /* TenFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */; };
-		CE5302081FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */; };
 		CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */; };
 		CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */; };
 		CE5302421FE1B876003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */; };
@@ -37,7 +36,8 @@
 		CE5302531FE1B876003CC5B1 /* SixtyFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */; };
 		CE5302541FE1B876003CC5B1 /* FortyFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */; };
 		CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */; };
-		CE5FF6E71FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */; };
+		CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D031FF46E7F00816741 /* TotalScores+CoreDataProperties.swift */; };
+		CE656D061FF46E8000816741 /* TotalScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D041FF46E7F00816741 /* TotalScores+CoreDataClass.swift */; };
 		CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F261FE5F0B300571738 /* icon attributions.swift */; };
 		CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F291FE951A700571738 /* totalScoreCell.swift */; };
 		CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */; };
@@ -69,7 +69,6 @@
 		CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoringArrayForTugOfWar.swift; sourceTree = "<group>"; };
 		CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPuttOfWarVC.swift; sourceTree = "<group>"; };
 		CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TotalScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		CE53022E1FE1B871003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/SixtyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -92,7 +91,8 @@
 		CE53023F1FE1B875003CC5B1 /* SixtyFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SixtyFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/SixtyFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataProperties.swift"; path = "../../../TotalScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE656D031FF46E7F00816741 /* TotalScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataProperties.swift"; path = "Pods/TotalScores+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		CE656D041FF46E7F00816741 /* TotalScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataClass.swift"; path = "Pods/TotalScores+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		CE968F261FE5F0B300571738 /* icon attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "icon attributions.swift"; sourceTree = "<group>"; };
 		CE968F291FE951A700571738 /* totalScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalScoreCell.swift; sourceTree = "<group>"; };
 		CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusExplantion.swift; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		CE968F281FE9515900571738 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
-				CE5FF6E61FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift */,
-				CE5302041FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift */,
+				CE656D041FF46E7F00816741 /* TotalScores+CoreDataClass.swift */,
+				CE656D031FF46E7F00816741 /* TotalScores+CoreDataProperties.swift */,
 				CE53022F1FE1B871003CC5B1 /* FortyFeetScores+CoreDataClass.swift */,
 				CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */,
 				CE5302331FE1B872003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift */,
@@ -443,6 +443,7 @@
 				CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */,
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
 				CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */,
+				CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
 				CE5302461FE1B876003CC5B1 /* FiftyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */,
@@ -451,7 +452,6 @@
 				CE5302511FE1B876003CC5B1 /* FifteenFeetScores+CoreDataProperties.swift in Sources */,
 				CECBE6D41FF3147B004FD8B0 /* chartsVCcustomcell.swift in Sources */,
 				CE5302491FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift in Sources */,
-				CE5FF6E71FF43E6300EF9159 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE968F311FEA484300571738 /* DesignableView.swift in Sources */,
 				CE5302521FE1B876003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift in Sources */,
 				CE5302451FE1B876003CC5B1 /* TwentyFeetScores+CoreDataClass.swift in Sources */,
@@ -459,11 +459,11 @@
 				CE5302421FE1B876003CC5B1 /* SixtyFeetScores+CoreDataProperties.swift in Sources */,
 				CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */,
 				CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */,
-				CE5302081FE17BBB003CC5B1 /* TotalScores+CoreDataClass.swift in Sources */,
 				CE5302471FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE53024B1FE1B876003CC5B1 /* FifteenFeetScores+CoreDataClass.swift in Sources */,
 				CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */,
+				CE656D061FF46E8000816741 /* TotalScores+CoreDataClass.swift in Sources */,
 				CE5302501FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift in Sources */,
 				CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */,
 				CE5302481FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift in Sources */,

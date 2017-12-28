@@ -16,7 +16,8 @@ class chartsVCcustomcell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var windDirectionIndexLabel: UILabel!
+    @IBOutlet weak var windDirectionImage: UIImageView!
+    
     
     
     

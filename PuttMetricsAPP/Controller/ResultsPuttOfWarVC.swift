@@ -154,12 +154,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let totalScoreForThatAttempt =  totalScoreToAppendToCoreData
         let dateForCurrentGame = NSDate()
-     //   let windDirectionInt = Int16(windDirectionIndex)
+        let windDirectionAsString = String(windDirectionIndex)
         if totalScoreForThatAttempt != 0 {
             let persistenceTotalScores = TotalScores(context: PersistenceService.context)
              persistenceTotalScores.total = totalScoreForThatAttempt
             persistenceTotalScores.date = dateForCurrentGame
-       //     persistenceTotalScores.windDirection = windDirectionInt
+            persistenceTotalScores.windDirection = windDirectionAsString
             self.totalScores.append(persistenceTotalScores)
             PersistenceService.saveContext()
 

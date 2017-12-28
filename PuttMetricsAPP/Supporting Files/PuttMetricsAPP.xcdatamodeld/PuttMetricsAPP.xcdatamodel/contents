@@ -43,6 +43,7 @@
     <entity name="TotalScores" representedClassName="TotalScores" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="total" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="TwentyFeetScores" representedClassName="TwentyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -63,7 +64,7 @@
         <element name="TenFeetScores" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="ThirtyFeetScores" positionX="18" positionY="63" width="128" height="75"/>
         <element name="ThirtyFiveFeetScores" positionX="0" positionY="45" width="128" height="75"/>
-        <element name="TotalScores" positionX="-486" positionY="-9" width="128" height="75"/>
+        <element name="TotalScores" positionX="-486" positionY="-9" width="128" height="90"/>
         <element name="TwentyFeetScores" positionX="-207" positionY="27" width="128" height="75"/>
         <element name="TwentyFiveFeetScores" positionX="-72" positionY="312" width="128" height="75"/>
     </elements>
