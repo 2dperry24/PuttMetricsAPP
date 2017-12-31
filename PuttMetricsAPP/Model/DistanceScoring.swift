@@ -14,10 +14,12 @@ class DistanceScoring {
     
     var  percentage : Double
     var totalPuttsTaken: Int
+    var windDirection: Int
     
-    init(totalPuttsTaken: Int, percentage: Double) {
+    init(totalPuttsTaken: Int, percentage: Double, windDirection: Int) {
         self.totalPuttsTaken = totalPuttsTaken
         self.percentage = percentage
+        self.windDirection = windDirection
     }
 }
 

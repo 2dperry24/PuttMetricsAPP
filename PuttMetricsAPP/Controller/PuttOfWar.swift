@@ -34,8 +34,9 @@ class PuttOfWar: UIViewController {
     
     
     //MARK: wind direction
-    var windDirectionindex = 0
+    private var windDirectionindex = 0
     @IBOutlet weak var windDirectionOutlet: UIButton!
+    
     @IBAction func windDirectionBTN(_ sender: UIButton) {
        windDirectionindex += 1
             if windDirectionindex > 4 {
@@ -56,8 +57,9 @@ class PuttOfWar: UIViewController {
         default:
              windDirectionOutlet.setImage(UIImage(named: "wind0"), for: .normal)
         }
-
+    
     }
+    
     
     @IBAction func undoButton(_ sender: UIButton) {
         if overallCounterForLevel > 0 {
@@ -108,15 +110,15 @@ class PuttOfWar: UIViewController {
     
     @IBOutlet weak var displayMessageForPassedLevelPopUpView: UILabel!
     
-    var tenFeetScores0 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var fifteenFeetScores1 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var twentyFeetScores2 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var twentyFiveFeetScores3 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var thirtyFeetScores4 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var thirtyFiveFeetScores5 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var fourtyFeetScores6 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var fourtyFiveScores7 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
-    var fiftyFeetScores8 = DistanceScoring(totalPuttsTaken: 0, percentage: 0)
+    var tenFeetScores0 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var fifteenFeetScores1 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var twentyFeetScores2 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var twentyFiveFeetScores3 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var thirtyFeetScores4 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var thirtyFiveFeetScores5 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var fourtyFeetScores6 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var fourtyFiveScores7 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
+    var fiftyFeetScores8 = DistanceScoring(totalPuttsTaken: 0, percentage: 0, windDirection: 0)
 
     
     @IBOutlet weak var bar5: RoundedEdgesTallButton!
@@ -317,72 +319,98 @@ class PuttOfWar: UIViewController {
     }
     
     
+    //Mark: WindDecisionArray is for see which wind condition is most used during the round to be used as the windcondition for the totalRound in ResultsVC.
+    var windDecisionArray = [Int]()
+    
+    func getMostCommonWindIndexNumber(array: [Int]) -> [Int] {
+        
+        var topNumber: [Int] = []
+        var numberDictionary: [Int: Int] = [:]
+        
+        for number in array {
+            if let count = numberDictionary[number] {
+                numberDictionary[number] = count + 1
+            } else {
+                numberDictionary[number] = 1
+            }
+        }
+        
+        let highestValue = numberDictionary.values.max()
+        
+        for (number, _) in numberDictionary {
+            if numberDictionary[number] == highestValue {
+                topNumber.append(number)
+            }
+        }
+        //return zero if there isn't a mode to indicate no wind
+        if array.count > 1 && highestValue == 1 {
+            return [0]
+        }
+        
+        
+        return topNumber
+    }
     
     
     
     func loadScoresIntoScoringArray() {
-        
-        
-        print("What IS MY INDEX in loadScoresIntoScoreArray: \(indexForDistanceArray)")
+    //    print("What IS MY INDEX in loadScoresIntoScoreArray: \(indexForDistanceArray)")
         if indexForDistanceArray == 0 {
-            
             tenFeetScores0.percentage = calculatePercentageForLevel()
             tenFeetScores0.totalPuttsTaken = Int(overallCounterForLevel)
+            tenFeetScores0.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(tenFeetScores0)
+            windDecisionArray.append(windDirectionindex)
         } else if indexForDistanceArray == 1 {
             fifteenFeetScores1.percentage = calculatePercentageForLevel()
             fifteenFeetScores1.totalPuttsTaken = Int(overallCounterForLevel)
+            fifteenFeetScores1.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(fifteenFeetScores1)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 2 {
             twentyFeetScores2.percentage = calculatePercentageForLevel()
             twentyFeetScores2.totalPuttsTaken = Int(overallCounterForLevel)
+            twentyFeetScores2.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(twentyFeetScores2)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 3 {
             twentyFiveFeetScores3.percentage = calculatePercentageForLevel()
             twentyFiveFeetScores3.totalPuttsTaken = Int(overallCounterForLevel)
+            twentyFiveFeetScores3.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(twentyFiveFeetScores3)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 4 {
             thirtyFeetScores4.percentage = calculatePercentageForLevel()
             thirtyFeetScores4.totalPuttsTaken = Int(overallCounterForLevel)
+            thirtyFeetScores4.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(thirtyFeetScores4)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 5 {
             thirtyFiveFeetScores5.percentage = calculatePercentageForLevel()
             thirtyFiveFeetScores5.totalPuttsTaken = Int(overallCounterForLevel)
+            thirtyFiveFeetScores5.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(thirtyFiveFeetScores5)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 6 {
             fourtyFeetScores6.percentage = calculatePercentageForLevel()
             fourtyFeetScores6.totalPuttsTaken = Int(overallCounterForLevel)
+            fourtyFeetScores6.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(fourtyFiveScores7)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 7 {
             fourtyFiveScores7.percentage = calculatePercentageForLevel()
-            
             fourtyFiveScores7.totalPuttsTaken = Int(overallCounterForLevel)
+            fourtyFiveScores7.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(fourtyFiveScores7)
+            windDecisionArray.append(windDirectionindex)
         }else if indexForDistanceArray == 8 {
             fiftyFeetScores8.percentage = calculatePercentageForLevel()
-            
             fiftyFeetScores8.totalPuttsTaken = Int(overallCounterForLevel)
+            fiftyFeetScores8.windDirection = windDirectionindex
             ScoresForAllLevelsArray.append(fiftyFeetScores8)
+            windDecisionArray.append(windDirectionindex)
               viewScoresPermission = true
         }
-//        else if indexForDistanceArray == 9 {
-//            fiftyFiveFeetScores9.percentage = calculatePercentageForLevel()
-//
-//            fiftyFiveFeetScores9.totalPuttsTaken = Int(overallCounterForLevel)
-//            ScoresForAllLevelsArray.append(fiftyFiveFeetScores9)
-//
-//
-//
-//
-//        }else if indexForDistanceArray == 10 {
-//            sixtyFeetScores10.percentage = calculatePercentageForLevel()
-//
-//            sixtyFeetScores10.totalPuttsTaken = Int(overallCounterForLevel)
-//            ScoresForAllLevelsArray.append(sixtyFeetScores10)
-//
-//
-//        }
-        
     }
     
     
@@ -607,7 +635,11 @@ class PuttOfWar: UIViewController {
             
             secondVC.resultsForScoringArray = ScoresForAllLevelsArray
             secondVC.cellCount = indexForDistanceArray + 1
-            secondVC.windDirectionTemp = windDirectionindex
+            
+            secondVC.windDirectionTemp = getMostCommonWindIndexNumber(array: windDecisionArray).first!
+            
+            print("windDecisionArray: \(windDecisionArray)")
+           
         } else {
             print("Data NOT Passed! destination vc is not set to ResultsTugOfWarVC")
         }

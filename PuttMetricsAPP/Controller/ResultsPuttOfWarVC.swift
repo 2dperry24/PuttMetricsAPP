@@ -64,7 +64,7 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
        windDirectionIndex = windDirectionTemp
-       print("winddirectionIndex: \(windDirectionIndex)")
+       print("winddirectionIndexREsultsVC: \(windDirectionIndex)")
        data = resultsForScoringArray
           getTotalScoreForRound()
        putScoresIntoEachDistaceArray()
@@ -154,12 +154,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let totalScoreForThatAttempt =  totalScoreToAppendToCoreData
         let dateForCurrentGame = NSDate()
-        let windDirectionAsString = String(windDirectionIndex)
+        let windDirectionTotal = windDirectionIndex
         if totalScoreForThatAttempt != 0 {
             let persistenceTotalScores = TotalScores(context: PersistenceService.context)
              persistenceTotalScores.total = totalScoreForThatAttempt
             persistenceTotalScores.date = dateForCurrentGame
-            persistenceTotalScores.windDirection = windDirectionAsString
+            persistenceTotalScores.windDirection = Int16(windDirectionTotal)
             self.totalScores.append(persistenceTotalScores)
             PersistenceService.saveContext()
 
@@ -188,10 +188,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score10puttsTaken = data[0].totalPuttsTaken
         let score10percent = data[0].percentage
+        let score10windDirection = data[0].windDirection
         if score10puttsTaken != 0 {
         let persistenceScoresfromTen = TenFeetScores(context: PersistenceService.context)
         persistenceScoresfromTen.puttsTaken = Int16(score10puttsTaken)
         persistenceScoresfromTen.percentage = score10percent
+        persistenceScoresfromTen.windDirection = Int16(score10windDirection)
 
         self.scoresfromTen.append(persistenceScoresfromTen)
             PersistenceService.saveContext()
@@ -229,11 +231,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score15puttsTaken = data[1].totalPuttsTaken
         let score15percent = data[1].percentage
+        let score15windDirection = data[1].windDirection
         if score15puttsTaken != 0 {
             let persistenceScoresfromFifteen = FifteenFeetScores(context: PersistenceService.context)
             persistenceScoresfromFifteen.puttsTaken = Int16(score15puttsTaken)
             persistenceScoresfromFifteen.percentage = score15percent
-
+            persistenceScoresfromFifteen.windDirection = Int16(score15windDirection)
             self.scoresfromFifteen.append(persistenceScoresfromFifteen)
             PersistenceService.saveContext()
 
@@ -263,10 +266,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score20puttsTaken = data[2].totalPuttsTaken
         let score20percent = data[2].percentage
+        let score20windDirection = data[2].windDirection
         if score20puttsTaken != 0 {
             let persistenceScoresfromTwenty = TwentyFeetScores(context: PersistenceService.context)
             persistenceScoresfromTwenty.puttsTaken = Int16(score20puttsTaken)
             persistenceScoresfromTwenty.percentage = score20percent
+            persistenceScoresfromTwenty.windDirection = Int16(score20windDirection)
             self.scoresfromTwenty.append(persistenceScoresfromTwenty)
               PersistenceService.saveContext()
 
@@ -293,10 +298,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score25puttsTaken = data[3].totalPuttsTaken
         let score25percent = data[3].percentage
+        let score25windDirection = data[3].windDirection
         if score25puttsTaken != 0 {
             let persistenceScoresfromTwentyFive = TwentyFiveFeetScores(context: PersistenceService.context)
             persistenceScoresfromTwentyFive.puttsTaken = Int16(score25puttsTaken)
             persistenceScoresfromTwentyFive.percentage = score25percent
+            persistenceScoresfromTwentyFive.windDirection = Int16(score25windDirection)
             self.scoresfromTwentyFive.append(persistenceScoresfromTwentyFive)
              PersistenceService.saveContext()
 
@@ -325,10 +332,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score30puttsTaken = data[4].totalPuttsTaken
         let score30percent = data[4].percentage
+        let score30windDirection = data[4].windDirection
         if score30puttsTaken != 0 {
             let persistenceScoresfromThirty = ThirtyFeetScores(context: PersistenceService.context)
             persistenceScoresfromThirty.puttsTaken = Int16(score30puttsTaken)
             persistenceScoresfromThirty.percentage = score30percent
+            persistenceScoresfromThirty.windDirection = Int16(score30windDirection)
             self.scoresfromThirty.append(persistenceScoresfromThirty)
                   PersistenceService.saveContext()
 
@@ -354,10 +363,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score35puttsTaken = data[5].totalPuttsTaken
         let score35percent = data[5].percentage
+        let score35windDirection = data[5].windDirection
         if score35puttsTaken != 0 {
             let persistenceScoresfromThirtyFive = ThirtyFiveFeetScores(context: PersistenceService.context)
             persistenceScoresfromThirtyFive.puttsTaken = Int16(score35puttsTaken)
             persistenceScoresfromThirtyFive.percentage = score35percent
+            persistenceScoresfromThirtyFive.windDirection = Int16(score35windDirection)
             self.scoresfromThirtyFive.append(persistenceScoresfromThirtyFive)
              PersistenceService.saveContext()
 
@@ -383,10 +394,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score40puttsTaken = data[6].totalPuttsTaken
         let score40percent = data[6].percentage
+        let score40windDirection = data[6].windDirection
         if score40puttsTaken != 0 {
             let persistenceScoresfromForty = FortyFeetScores(context: PersistenceService.context)
             persistenceScoresfromForty.puttsTaken = Int16(score40puttsTaken)
             persistenceScoresfromForty.percentage = score40percent
+            persistenceScoresfromForty.windDirection = Int16(score40windDirection)
             self.scoresfromForty.append(persistenceScoresfromForty)
             PersistenceService.saveContext()
 
@@ -412,10 +425,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score45puttsTaken = data[7].totalPuttsTaken
         let score45percent = data[7].percentage
+        let score45windDirection = data[7].windDirection
         if score45puttsTaken != 0 {
             let persistenceScoresfromFortyFive = FortyFiveFeetScores(context: PersistenceService.context)
             persistenceScoresfromFortyFive.puttsTaken = Int16(score45puttsTaken)
             persistenceScoresfromFortyFive.percentage = score45percent
+            persistenceScoresfromFortyFive.windDirection = Int16(score45windDirection)
             self.scoresfromFortyFive.append(persistenceScoresfromFortyFive)
             PersistenceService.saveContext()
 
@@ -442,10 +457,12 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
         let score50puttsTaken = data[8].totalPuttsTaken
         let score50percent = data[8].percentage
+        let score50windDirection = data[8].windDirection
         if score50puttsTaken != 0 {
             let persistenceScoresfromFifty = FiftyFeetScores(context: PersistenceService.context)
             persistenceScoresfromFifty.puttsTaken = Int16(score50puttsTaken)
             persistenceScoresfromFifty.percentage = score50percent
+            persistenceScoresfromFifty.windDirection = Int16(score50windDirection)
             self.scoresfromFifty.append(persistenceScoresfromFifty)
              PersistenceService.saveContext()
 

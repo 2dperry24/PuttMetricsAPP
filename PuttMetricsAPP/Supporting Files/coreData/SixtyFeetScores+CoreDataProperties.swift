@@ -18,5 +18,5 @@ extension SixtyFeetScores {
 
     @NSManaged public var puttsTaken: Int16
     @NSManaged public var percentage: Double
-
+    @NSManaged public var windDirection: String?
 }

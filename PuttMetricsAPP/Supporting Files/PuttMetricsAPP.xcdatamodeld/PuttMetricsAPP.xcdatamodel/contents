@@ -7,65 +7,64 @@
     <entity name="FifteenFeetScores" representedClassName="FifteenFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="FiftyFeetScores" representedClassName="FiftyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
-    <entity name="FiftyFiveFeetScores" representedClassName="FiftyFiveFeetScores" syncable="YES">
-        <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="FortyFeetScores" representedClassName="FortyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="FortyFiveFeetScores" representedClassName="FortyFiveFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
-    <entity name="SixtyFeetScores" representedClassName="SixtyFeetScores" syncable="YES">
-        <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TenFeetScores" representedClassName="TenFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ThirtyFeetScores" representedClassName="ThirtyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ThirtyFiveFeetScores" representedClassName="ThirtyFiveFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TotalScores" representedClassName="TotalScores" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="total" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="windDirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TwentyFeetScores" representedClassName="TwentyFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TwentyFiveFeetScores" representedClassName="TwentyFiveFeetScores" syncable="YES">
         <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="puttsTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Bag" positionX="-54" positionY="9" width="128" height="75"/>
-        <element name="FifteenFeetScores" positionX="0" positionY="45" width="128" height="75"/>
-        <element name="FiftyFeetScores" positionX="-45" positionY="18" width="128" height="75"/>
-        <element name="FiftyFiveFeetScores" positionX="9" positionY="54" width="128" height="75"/>
-        <element name="FortyFeetScores" positionX="-18" positionY="36" width="128" height="75"/>
-        <element name="FortyFiveFeetScores" positionX="-36" positionY="27" width="128" height="75"/>
-        <element name="SixtyFeetScores" positionX="18" positionY="63" width="128" height="75"/>
-        <element name="TenFeetScores" positionX="-54" positionY="9" width="128" height="75"/>
-        <element name="ThirtyFeetScores" positionX="18" positionY="63" width="128" height="75"/>
-        <element name="ThirtyFiveFeetScores" positionX="0" positionY="45" width="128" height="75"/>
+        <element name="FifteenFeetScores" positionX="0" positionY="45" width="128" height="90"/>
+        <element name="FiftyFeetScores" positionX="-45" positionY="18" width="128" height="90"/>
+        <element name="FortyFeetScores" positionX="-18" positionY="36" width="128" height="90"/>
+        <element name="FortyFiveFeetScores" positionX="-36" positionY="27" width="128" height="90"/>
+        <element name="TenFeetScores" positionX="-54" positionY="9" width="128" height="90"/>
+        <element name="ThirtyFeetScores" positionX="18" positionY="63" width="128" height="90"/>
+        <element name="ThirtyFiveFeetScores" positionX="0" positionY="45" width="128" height="90"/>
         <element name="TotalScores" positionX="-486" positionY="-9" width="128" height="90"/>
-        <element name="TwentyFeetScores" positionX="-207" positionY="27" width="128" height="75"/>
-        <element name="TwentyFiveFeetScores" positionX="-72" positionY="312" width="128" height="75"/>
+        <element name="TwentyFeetScores" positionX="-207" positionY="27" width="128" height="90"/>
+        <element name="TwentyFiveFeetScores" positionX="-72" positionY="312" width="128" height="90"/>
     </elements>
 </model>

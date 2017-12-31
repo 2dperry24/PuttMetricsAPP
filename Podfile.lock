@@ -2,6 +2,9 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
   - ConcentricProgressRingView (2.0.0):
     - LionheartExtensions
   - Firebase (4.8.0):
@@ -56,6 +59,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework
+  - Charts
   - ConcentricProgressRingView
   - Firebase
   - Firebase/Auth
@@ -64,6 +68,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   ConcentricProgressRingView: 4035c37331ea159dd615f8edbabd2d8e94235da1
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
@@ -78,6 +83,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 504365a286d382670bde3357d4154fffd8eb6d62
+PODFILE CHECKSUM: 4b5a1aeee5b71761e0132c55a4d8923623eae38a
 
 COCOAPODS: 1.3.1
