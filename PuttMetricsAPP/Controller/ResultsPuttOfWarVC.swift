@@ -15,6 +15,9 @@ import CoreData
 class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     
+    var playerProfileTemp = String()
+    var playerProfile = ""
+    
     @IBOutlet weak var AverageScoreLabel: UILabel!
     @IBOutlet weak var levelsPassedLabel: UILabel!
     var awardImageArray = [UIImageView]()
@@ -63,12 +66,13 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerProfile = playerProfileTemp
        windDirectionIndex = windDirectionTemp
        print("winddirectionIndexREsultsVC: \(windDirectionIndex)")
        data = resultsForScoringArray
           getTotalScoreForRound()
        putScoresIntoEachDistaceArray()
-      
+        
         
 
         
@@ -82,6 +86,7 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
         tableViewForScores.separatorColor = UIColor.darkGray
 
         self.navigationItem.title = "Putt-of-War"
+        print("playerprofile = \(playerProfile)")
     }
 
     
@@ -94,7 +99,9 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
     func getTotalScoreForRound() -> Double {
       
         sumOfScores = data[0].percentage + data[1].percentage + data[2].percentage + data[3].percentage + data[4].percentage + data[5].percentage + data[6].percentage + data[7].percentage + data[8].percentage
-
+        
+     
+        
         var bonusMultiplier = 0
         
         for x in 0...8 {
@@ -122,6 +129,8 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
         bonusPointTotal = 640
         case 8:
         bonusPointTotal = 1280
+        case 9:
+        bonusPointTotal = 2560
         default:
             bonusPointTotal = 0
         }
@@ -150,6 +159,23 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
    func putScoresIntoEachDistaceArray() {
 
+    if playerProfile == "guest" {
+       
+        let fetchRequestMaxScore: NSFetchRequest<TotalScores> = TotalScores.fetchRequest()
+        let sort = NSSortDescriptor(keyPath: \TotalScores.total, ascending: false)
+        fetchRequestMaxScore.sortDescriptors = [sort]
+        do {
+            let maxTempScore = try PersistenceService.context.fetch(fetchRequestMaxScore)
+            if let highCount = maxTempScore.first?.total {
+                maxScore = highCount
+                
+            }
+            //self.maxScore = highCount }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    } else {
 
 
         let totalScoreForThatAttempt =  totalScoreToAppendToCoreData
@@ -162,7 +188,7 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
             persistenceTotalScores.windDirection = Int16(windDirectionTotal)
             self.totalScores.append(persistenceTotalScores)
             PersistenceService.saveContext()
-
+        
 
 
 
@@ -488,18 +514,32 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
                 lifeTimeAveragesForScorePerLevel.append(average50Score.rounded())
 
         }
+    }
 }
 
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
+        if playerProfile == "guest" {
+            return 1
+        } else {
         //Use +1 to account for total score taking up index.row = 0
         return cellCount + 1
-        
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if playerProfile == "guest" {
+           
+            if(selectedIndexTotalScore == indexPath.row) {
+                return 300;
+            } else {
+                return 120
+            }
+        } else {
+        
+        
         if indexPath.row == 0 {
             
             if(selectedIndexTotalScore == indexPath.row) {
@@ -516,9 +556,19 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
      }
-    
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        if playerProfile == "guest" {
+            if(selectedIndexTotalScore == indexPath.row) {
+                selectedIndexTotalScore = -1
+            } else {
+                selectedIndexTotalScore = indexPath.row
+            }
+            
+        } else {
+        
+        
+        
         if indexPath.row == 0 {
             
             
@@ -536,7 +586,7 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
                 selectedIndex = indexPath.row
             }
             
-            
+            }
         }
         
 
@@ -549,6 +599,35 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if playerProfile == "guest" {
+            var perfectLevelCount = 0
+            let levelsPassed = cellCount - 1
+            
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "totalScore") as! totalScoreCustomCell
+            let awardImageArray = [cell2.awardImage0, cell2.awardImage1, cell2.awardImage2, cell2.awardImage3, cell2.awardImage4, cell2.awardImage5, cell2.awardImage6, cell2.awardImage7, cell2.awardImage8 ]
+            for x in 0...8 {
+                
+                if data[x].percentage > 99 {
+                    awardImageArray[x]!.image = UIImage(named: "fire")
+                    perfectLevelCount += 1
+                }
+            }
+            
+            cell2.totalScoreLabel.text = String(Int((averageScoreForAllAttemptedLevels.rounded() * Double(levelsPassed).rounded())) + Int(bonusPointTotal))
+            cell2.averagePercentLabel.text = String(Int(averageScoreForAllAttemptedLevels.rounded()))
+            cell2.perfectLevelsLabel.text = String(Int(bonusPointTotal))
+            cell2.levelsPassedLabel.text = String(levelsPassed)
+            cell2.highScoreLabel.text = String("High Score: \(Int(maxScore))")
+            // print("highScore equals _________________: \(maxScore)")
+            
+            return cell2
+            
+        } else {
+        
+        
+        
+        
         if indexPath.row == 0 {
             
             var perfectLevelCount = 0
@@ -576,6 +655,8 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
             
             
         } else {
+            
+           
             
             let indexReplacement = indexPath.row - 1
             
@@ -660,9 +741,9 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
             cell.AverageTotalPuttsLabel.text = String(Int(lifeTimeAveragesForPuttsPerLevel[indexReplacement]))
             return cell
             }
-        
-            
         }
+            
+    }
     
     
 

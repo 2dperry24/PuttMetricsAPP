@@ -15,24 +15,26 @@ import Charts
 
 
 class RadarChartViewController: DemoBaseViewController {
-    @IBAction func backBTN(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+  
+    
+  
+  
+    //   @IBOutlet weak var viewheightConstraint: NSLayoutConstraint!
+    @IBOutlet var chartView: RadarChartView!{
+        didSet{
+            fetchcoredataToPopulateRadarGraph()
+            updateChartData()
+            
+        }
     }
     
+    let activities = ["10'", "15'", "20'","25'", "30'", "35","40'", "45'", "50'"]
+    var counter = 0
    
- //   @IBOutlet weak var viewheightConstraint: NSLayoutConstraint!
-    @IBOutlet var chartView: RadarChartView!
-    
-    let activities = ["10'", "15'", "20'"]
-        
-    //    , "25'", "30'","35'", "40'", "45'", "50'"]
-    var originalBarBgColor: UIColor!
-    var originalBarTintColor: UIColor!
-    var originalBarStyle: UIBarStyle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //  viewheightConstraint.constant = CGFloat(chartView.frame.width)
+      
         // Do any additional setup after loading the view.
         self.title = "Radar Bar Chart"
         self.options = [.toggleValues,
@@ -91,15 +93,24 @@ class RadarChartViewController: DemoBaseViewController {
         
         chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4, easingOption: .easeOutBack)
    
-    
+    let pickerViewOptions = ["All Conditions", "No Wind", "Head Wind", "Tail Wind", "Right-to-Left", "Left-to-Right", ""]
         
         
-    fetchcoredataToPopulateRadarGraph()
-    
+      
+    setPickerView()
+    createToolBar()
+       
+        
+        
     self.updateChartData()
+    pickerViewTextField.text = pickerViewOptions[pickingIndexSet1]
+    pickerViewTextField2.text = pickerViewOptions[pickingIndexSet2]
+        
     }
-    
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        fetchcoredataToPopulateRadarGraph()
+//    }
+//
 //    func transferDataFromCoreDataIntoDoubleArray(doubleArray: [Double], coreData: [TenFeetScores]) -> Double {
 //
 //        for x in coreData.indices {
@@ -226,6 +237,15 @@ class RadarChartViewController: DemoBaseViewController {
     var allDistancesFor50_2Wind: [Double] = []
     var allDistancesFor50_3Wind: [Double] = []
     var allDistancesFor50_4Wind: [Double] = []
+    
+    
+   //These are the arrays that will be passed into the RadarGraphEntry as data Sets
+    
+    var allWindsFor_0Wind : [Double] = []
+    var allWindsFor_1Wind : [Double] = []
+    var allWindsFor_2Wind : [Double] = []
+    var allWindsFor_3Wind : [Double] = []
+    var allWindsFor_4Wind : [Double] = []
     
     
     func checkForNan(intake: Double) -> Double {
@@ -1022,133 +1042,135 @@ class RadarChartViewController: DemoBaseViewController {
         } catch let error as NSError {
             print("Could not fetch from 40coredata. \(error), \(error.userInfo)")
         }
-        var allwindsCombinedAverage50 = [Double]()
+                        var allwindsCombinedAverage50 = [Double]()
         
-        let sumOfArray50_0 = scoresfromFifty_0.reduce(0, {$0 + $1.percentage})
-        let average50_0 = (Double(sumOfArray50_0) / Double(scoresfromFifty_0.count))
-        if checkForNan(intake: average50_0) != 0 {
-            allDistancesFor50_0Wind.append(average50_0)
-            allwindsCombinedAverage50.append(average50_0)
-        }
-        print("scoresfromFifty_0.count: \(scoresfromFifty_0.count)")
-        print("allDistancesFor50_0Wind: \(allDistancesFor50_0Wind)")
+                        let sumOfArray50_0 = scoresfromFifty_0.reduce(0, {$0 + $1.percentage})
+                        let average50_0 = (Double(sumOfArray50_0) / Double(scoresfromFifty_0.count))
+                        if checkForNan(intake: average50_0) != 0 {
+                            allDistancesFor50_0Wind.append(average50_0)
+                            allwindsCombinedAverage50.append(average50_0)
+                        }
+                        print("scoresfromFifty_0.count: \(scoresfromFifty_0.count)")
+                        print("allDistancesFor50_0Wind: \(allDistancesFor50_0Wind)")
         
-        let sumOfArray50_1 = scoresfromFifty_1.reduce(0, {$0 + $1.percentage})
-        let average50_1 = (Double(sumOfArray50_1) / Double(scoresfromFifty_1.count))
-        if checkForNan(intake: average50_1) != 0 {
-            allDistancesFor50_1Wind.append(average50_1)
-            allwindsCombinedAverage50.append(average50_1)
-        }
+                        let sumOfArray50_1 = scoresfromFifty_1.reduce(0, {$0 + $1.percentage})
+                        let average50_1 = (Double(sumOfArray50_1) / Double(scoresfromFifty_1.count))
+                        if checkForNan(intake: average50_1) != 0 {
+                            allDistancesFor50_1Wind.append(average50_1)
+                            allwindsCombinedAverage50.append(average50_1)
+                        }
         
-        print("scoresfromFifty1.count: \(scoresfromFifty_1.count)")
-        print("allDistancesFor50_1Wind: \(allDistancesFor50_1Wind)")
+                        print("scoresfromFifty1.count: \(scoresfromFifty_1.count)")
+                        print("allDistancesFor50_1Wind: \(allDistancesFor50_1Wind)")
         
-        let sumOfArray50_2 = scoresfromFifty_2.reduce(0, {$0 + $1.percentage})
-        let average50_2 = (Double(sumOfArray50_2) / Double(scoresfromFifty_2.count))
-        if checkForNan(intake: average50_2) != 0 {
-            allDistancesFor50_2Wind.append(average50_2)
-            allwindsCombinedAverage50.append(average50_2)
-        }
-        print("scoresfromFifty2.count: \(scoresfromFifty_2.count)")
-        print("allDistancesFor50_2Wind: \(allDistancesFor50_2Wind)")
+                        let sumOfArray50_2 = scoresfromFifty_2.reduce(0, {$0 + $1.percentage})
+                        let average50_2 = (Double(sumOfArray50_2) / Double(scoresfromFifty_2.count))
+                        if checkForNan(intake: average50_2) != 0 {
+                            allDistancesFor50_2Wind.append(average50_2)
+                            allwindsCombinedAverage50.append(average50_2)
+                        }
+                        print("scoresfromFifty2.count: \(scoresfromFifty_2.count)")
+                        print("allDistancesFor50_2Wind: \(allDistancesFor50_2Wind)")
         
-        let sumOfArray50_3 = scoresfromFortyFive_3.reduce(0, {$0 + $1.percentage})
-        let average50_3 = (Double(sumOfArray50_3) / Double(scoresfromFortyFive_3.count))
-        if checkForNan(intake: average50_3) != 0 {
-            allDistancesFor50_3Wind.append(average50_3)
-            allwindsCombinedAverage50.append(average50_3)
-        }
-        print("scoresfromFifty3.count: \(scoresfromFortyFive_3.count)")
-        print("allDistancesFor50_3Wind: \(allDistancesFor50_3Wind)")
+                        let sumOfArray50_3 = scoresfromFortyFive_3.reduce(0, {$0 + $1.percentage})
+                        let average50_3 = (Double(sumOfArray50_3) / Double(scoresfromFortyFive_3.count))
+                        if checkForNan(intake: average50_3) != 0 {
+                            allDistancesFor50_3Wind.append(average50_3)
+                            allwindsCombinedAverage50.append(average50_3)
+                        }
+                        print("scoresfromFifty3.count: \(scoresfromFortyFive_3.count)")
+                        print("allDistancesFor50_3Wind: \(allDistancesFor50_3Wind)")
         
-        let sumOfArray50_4 = scoresfromFifty_4.reduce(0, {$0 + $1.percentage})
-        let average50_4 = (Double(sumOfArray50_4) / Double(scoresfromFifty_4.count))
-        if checkForNan(intake: average50_4) != 0 {
-            allDistancesFor50_4Wind.append(average50_4)
-            allwindsCombinedAverage50.append(average50_4)
-        }
-        print("scoresfromFifty4.count: \(scoresfromFifty_4.count)")
-        print("allDistancesFor50_4Wind: \(allDistancesFor50_4Wind)")
-        
-        
-        
-        print("allwindsCombinedAverage50:\(allwindsCombinedAverage50)")
-        let sumOfAllWindsCombinedAverages50 = allwindsCombinedAverage50.reduce(0, {$0 + $1})
-        print("sumOfAllWindsCombinedAverages50: \(sumOfAllWindsCombinedAverages50)")
-        let AverageOfAllWindsCombinedAverages50 = sumOfAllWindsCombinedAverages50 / Double(allwindsCombinedAverage50.count)
-        //allDistancesTotal will be the average of everything from that distances to be the underlying layer in the radar graph.
-        AverageForEachDistanceAllWindConditions.append(AverageOfAllWindsCombinedAverages50)
-        
-        print("AverageForEachDistanceAllWindConditions[8]: \(AverageForEachDistanceAllWindConditions)")
-        print("AverageForEachDistanceAllWindConditions.count: \(AverageForEachDistanceAllWindConditions.count)")
+                        let sumOfArray50_4 = scoresfromFifty_4.reduce(0, {$0 + $1.percentage})
+                        let average50_4 = (Double(sumOfArray50_4) / Double(scoresfromFifty_4.count))
+                        if checkForNan(intake: average50_4) != 0 {
+                            allDistancesFor50_4Wind.append(average50_4)
+                            allwindsCombinedAverage50.append(average50_4)
+                        }
+                        print("scoresfromFifty4.count: \(scoresfromFifty_4.count)")
+                        print("allDistancesFor50_4Wind: \(allDistancesFor50_4Wind)")
         
         
         
+                        print("allwindsCombinedAverage50:\(allwindsCombinedAverage50)")
+                        let sumOfAllWindsCombinedAverages50 = allwindsCombinedAverage50.reduce(0, {$0 + $1})
+                        print("sumOfAllWindsCombinedAverages50: \(sumOfAllWindsCombinedAverages50)")
+                        let AverageOfAllWindsCombinedAverages50 = sumOfAllWindsCombinedAverages50 / Double(allwindsCombinedAverage50.count)
+                        //allDistancesTotal will be the average of everything from that distances to be the underlying layer in the radar graph.
+                        AverageForEachDistanceAllWindConditions.append(AverageOfAllWindsCombinedAverages50)
+        
+                        print("AverageForEachDistanceAllWindConditions[8]: \(AverageForEachDistanceAllWindConditions)")
+                        print("AverageForEachDistanceAllWindConditions.count: \(AverageForEachDistanceAllWindConditions.count)")
         
         
+        let allZeroWinds_ParentArray = [allDistancesFor10_0Wind, allDistancesFor15_0Wind,allDistancesFor20_0Wind,allDistancesFor25_0Wind,allDistancesFor30_0Wind,allDistancesFor35_0Wind,allDistancesFor40_0Wind,allDistancesFor45_0Wind,allDistancesFor50_0Wind]
         
+        let allOneWinds_ParentArray = [allDistancesFor10_1Wind, allDistancesFor15_1Wind,allDistancesFor20_1Wind,allDistancesFor25_1Wind,allDistancesFor30_1Wind,allDistancesFor35_1Wind,allDistancesFor40_1Wind,allDistancesFor45_1Wind,allDistancesFor50_1Wind]
         
+         let allTwoWinds_ParentArray = [allDistancesFor10_2Wind, allDistancesFor15_2Wind,allDistancesFor20_2Wind,allDistancesFor25_2Wind,allDistancesFor30_2Wind,allDistancesFor35_2Wind,allDistancesFor40_2Wind,allDistancesFor45_2Wind,allDistancesFor50_2Wind]
         
+        let allThreeWinds_ParentArray = [allDistancesFor10_3Wind, allDistancesFor15_3Wind,allDistancesFor20_3Wind,allDistancesFor25_3Wind,allDistancesFor30_3Wind,allDistancesFor35_3Wind,allDistancesFor40_3Wind,allDistancesFor45_3Wind,allDistancesFor50_3Wind]
         
+        let allFourWinds_ParentArray = [allDistancesFor10_4Wind, allDistancesFor15_4Wind,allDistancesFor20_4Wind,allDistancesFor25_4Wind,allDistancesFor30_4Wind,allDistancesFor35_4Wind,allDistancesFor40_4Wind,allDistancesFor45_4Wind,allDistancesFor50_4Wind]
         
-        
-        
-        
-        
-        
-        
-        
-        
-//        let fetchRequest10_1: NSFetchRequest<TenFeetScores> = TenFeetScores.fetchRequest()
-//        fetchRequest10_1.predicate = NSPredicate(format: "%K == %@", #keyPath(TenFeetScores.windDirection), "1")
-//        do {
-//             print("fetched 2 done")
-//            let sortedScores = try PersistenceService.context.fetch(fetchRequest10_1)
-//            self.scoresfromTen_1 = sortedScores
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//
-//
-//                        let sumOfArray10_1 = scoresfromTen_1.reduce(0, {$0 + $1.percentage})
-//                        let average10_1 = (Double(sumOfArray10_1) / Double(scoresfromTen_1.count))
-//                        allDistancesFor1Wind.append(average10_1)
-//
-//                            print("scoresfromTen1.count: \(scoresfromTen_1.count)")
-//                            print("allDistancesFor1Wind: \(allDistancesFor1Wind)")
-//
-//
-        
-        
-        
-        
-        
-        
-        
-       
-        
-   
-//
-//        let fetchRequest15: NSFetchRequest<FifteenFeetScores> = FifteenFeetScores.fetchRequest()
-//        do {
-//            let scores15 = try PersistenceService.context.fetch(fetchRequest15)
-//            self.scoresfromFifteen = scores15
-//            //   print("scorefromTen: \(scoresfromTen)")
-//            //    self.tableViewForScores.reloadData()
-//        } catch { print("Reloading data didn't work, hence the catch 15")}
-//
-//
-//
-//        let fetchRequest20: NSFetchRequest<TwentyFeetScores> = TwentyFeetScores.fetchRequest()
-//        do {
-//            let scores20 = try PersistenceService.context.fetch(fetchRequest20)
-//            self.scoresfromTwenty = scores20
-//            //   print("scorefromTen: \(scoresfromTen)")
-//            //    self.tableViewForScores.reloadData()
-//        } catch { print("Reloading data didn't work, hence the catch 20")}
-//
-        
+        var grandParentArray = [allZeroWinds_ParentArray, allOneWinds_ParentArray,allTwoWinds_ParentArray,allThreeWinds_ParentArray,allFourWinds_ParentArray ]
+        var dataSetArraysForRadarGraph = [allWindsFor_0Wind, allWindsFor_1Wind,allWindsFor_2Wind,allWindsFor_3Wind,allWindsFor_4Wind,]
 
+        for element in 0..<5 {
+                for number in 0..<9 {
+
+                    if (grandParentArray[element])[number].isEmpty {
+                        print((grandParentArray[element])[number].isEmpty)
+                        // allWindsFor_0Wind.append(0)
+                        switch element {
+                        case 0: allWindsFor_0Wind.append(0)
+                        case 1: allWindsFor_1Wind.append(0)
+                        case 2: allWindsFor_2Wind.append(0)
+                        case 3: allWindsFor_3Wind.append(0)
+                        case 4: allWindsFor_4Wind.append(0)
+                        default: return
+                        }
+                    } else {
+                       let sum =  (grandParentArray[element])[number].reduce(0, {$0 + $1})
+                        let average = (sum / Double((grandParentArray[element])[number].count))
+                      //  allWindsFor_0Wind.append(average)
+                        switch element {
+                        case 0: allWindsFor_0Wind.append(average)
+                        case 1: allWindsFor_1Wind.append(average)
+                        case 2: allWindsFor_2Wind.append(average)
+                        case 3: allWindsFor_3Wind.append(average)
+                        case 4: allWindsFor_4Wind.append(average)
+                        default: return
+                        }
+                        
+                    }
+                    print("allZeroWinds_ParentArray\(element).count: \(dataSetArraysForRadarGraph[element].count)")
+                    print("allZeroWinds_ParentArray\(element): \(dataSetArraysForRadarGraph[element])")
+                }
+        }
+
+        
+//
+//                            for number in 0..<9 {
+//
+//                                if allZeroWinds_ParentArray[number].isEmpty {
+//                                    allWindsFor_0Wind.append(0)
+//                                } else {
+//                                   let sum =  allZeroWinds_ParentArray[number].reduce(0, {$0 + $1})
+//                                    let average = (sum / Double(allZeroWinds_ParentArray[number].count))
+//                                    allWindsFor_0Wind.append(average)
+//                                }
+//                                print("allZeroWinds_ParentArray1.count: \(allWindsFor_0Wind.count)")
+//                                print("allZeroWinds_ParentArray1: \(allWindsFor_0Wind)")
+//                            }
+//
+//
+//
+        
+        
+        
+        
+        
     }
     
     
@@ -1158,28 +1180,28 @@ class RadarChartViewController: DemoBaseViewController {
     
     
     
+//
+//    func configureRadarChartDataEntryArray() -> [RadarChartDataEntry]{
+//        var dataRadarChartDataEntryArray = [Double]()
+//
+//        let sumOfScoreTaken = scoresfromTen_0.reduce(0, {$0 + $1.percentage})
+//        let average10Score = Double(sumOfScoreTaken) / Double(scoresfromTen_0.count)
+//                dataRadarChartDataEntryArray.append(average10Score)
+//        let sumOfScoreTaken15 = scoresfromFifteen.reduce(0, {$0 + $1.percentage})
+//        let average15Score = Double(sumOfScoreTaken15) / Double(scoresfromFifteen.count)
+//                dataRadarChartDataEntryArray.append(average15Score)
+//        let sumOfScoreTaken20 = scoresfromTwenty.reduce(0, {$0 + $1.percentage})
+//        let average20Score = Double(sumOfScoreTaken20) / Double(scoresfromTwenty.count)
+//                dataRadarChartDataEntryArray.append(average20Score)
+//        print("dataRadarChartDataEntryArray: \(dataRadarChartDataEntryArray)")
+//
+//     //   let container = getTotalFromTenFeet(Average: dataRadarChartDataEntryArray)
+//
+//
+//        return container
+//    }
     
-    func configureRadarChartDataEntryArray() -> [RadarChartDataEntry]{
-        var dataRadarChartDataEntryArray = [Double]()
-        
-        let sumOfScoreTaken = scoresfromTen_0.reduce(0, {$0 + $1.percentage})
-        let average10Score = Double(sumOfScoreTaken) / Double(scoresfromTen_0.count)
-                dataRadarChartDataEntryArray.append(average10Score)
-        let sumOfScoreTaken15 = scoresfromFifteen.reduce(0, {$0 + $1.percentage})
-        let average15Score = Double(sumOfScoreTaken15) / Double(scoresfromFifteen.count)
-                dataRadarChartDataEntryArray.append(average15Score)
-        let sumOfScoreTaken20 = scoresfromTwenty.reduce(0, {$0 + $1.percentage})
-        let average20Score = Double(sumOfScoreTaken20) / Double(scoresfromTwenty.count)
-                dataRadarChartDataEntryArray.append(average20Score)
-        print("dataRadarChartDataEntryArray: \(dataRadarChartDataEntryArray)")
-        
-        let container = getTotalFromTenFeet(Average: dataRadarChartDataEntryArray)
-       
-        
-        return container
-    }
-    
-    func getTotalFromTenFeet(Average: [Double]) -> [RadarChartDataEntry]  {
+    func convertToRadarChartDataEntry(Average: [Double]) -> [RadarChartDataEntry]  {
         var container = [RadarChartDataEntry]()
        
         for index in Average.indices{
@@ -1201,34 +1223,7 @@ class RadarChartViewController: DemoBaseViewController {
     
     
     
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//
-//        UIView.animate(withDuration: 0.15) {
-//            let navBar = self.navigationController!.navigationBar
-//            self.originalBarBgColor = navBar.barTintColor
-//            self.originalBarTintColor = navBar.tintColor
-//            self.originalBarStyle = navBar.barStyle
-//
-//            navBar.barTintColor = self.view.backgroundColor
-//            navBar.tintColor = .white
-//            navBar.barStyle = .black
-//        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-//
-//        UIView.animate(withDuration: 0.15) {
-//            let navBar = self.navigationController!.navigationBar
-//            navBar.barTintColor = self.originalBarBgColor
-//            navBar.tintColor = self.originalBarTintColor
-//            navBar.barStyle = self.originalBarStyle
-//        }
-    }
-    
+
     override func updateChartData() {
         if self.shouldHideData {
             chartView.data = nil
@@ -1238,28 +1233,49 @@ class RadarChartViewController: DemoBaseViewController {
         self.setChartData()
     }
     
+    
+    
+    
+    var set2Label = ""
+    var set1Label = ""
+    var pickingIndexSet1 = 0
+    var pickingIndexSet2 = 6
     func setChartData() {
-        let mult: UInt32 = 80
-        let min: UInt32 = 20
-        let cnt = 3
+    
         
         
-       // let scoringAverage10 = [ 112 , 132.3, 423, 542.3, 554.3]
+        // These arrays are fake data to populate the radar chart for testing purposes.
         
-        let block: (Int) -> RadarChartDataEntry = { _ in return RadarChartDataEntry(value: Double(arc4random_uniform(mult) + min))}
+//        let allwinds0Temp = [100.0, 95.0, 90.0] // 88.4, 92.0, 55.0, 32.9]
+//        let allwinds1Temp = [95.0, 98.0, 80.0, 78.4, 62.0, 65.0, 22.9, 42.0]
+//        let allwinds2Temp = [90.0, 90.0, 60.0, 68.4, 82.0, 75.0, 12.9]
+//        let allwinds3Temp = [93.0, 92.0, 90.0, 98.4, 97.0, 78.0, 52.9]
+//        let allwinds4Temp = [83.0, 96.0, 96.0] // 60.4, 72.0, 72.0, 32.9]
+//
+//
+//        let EmptyStartingArrray7 = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+//        let myEntry0 = convertToRadarChartDataEntry(Average: AverageForEachDistanceAllWindConditions)
+//        let myEntry1 = convertToRadarChartDataEntry(Average: allwinds0Temp)
+//        let myEntry2 = convertToRadarChartDataEntry(Average: allwinds1Temp)
+//        let myEntry3 = convertToRadarChartDataEntry(Average: allwinds2Temp)
+//        let myEntry4 = convertToRadarChartDataEntry(Average: allwinds3Temp)
+//        let myEntry5 = convertToRadarChartDataEntry(Average: allwinds4Temp)
+//        let myEntry6 = convertToRadarChartDataEntry(Average: EmptyStartingArrray7)
+//
+        // End of fake data entry section
         
+        let EmptyStartingArrray7 = [Double]()
+        let myEntry0 = convertToRadarChartDataEntry(Average: AverageForEachDistanceAllWindConditions)
+        let myEntry1 = convertToRadarChartDataEntry(Average: allWindsFor_0Wind)
+        let myEntry2 = convertToRadarChartDataEntry(Average: allWindsFor_1Wind)
+        let myEntry3 = convertToRadarChartDataEntry(Average: allWindsFor_2Wind)
+        let myEntry4 = convertToRadarChartDataEntry(Average: allWindsFor_3Wind)
+        let myEntry5 = convertToRadarChartDataEntry(Average: allWindsFor_4Wind)
+        let myEntry6 = convertToRadarChartDataEntry(Average: EmptyStartingArrray7)
+
         
-        
-        let entries1 = (0..<cnt).map(block)
-        let entries2 = (0..<cnt).map(block)
-        
-                print("entries1: \([entries1])")
-        
-        
-        let myEntry1 = configureRadarChartDataEntryArray()
-                print("[myEntry1]: \(myEntry1)")
-        
-        let set1 = RadarChartDataSet(values: myEntry1, label: "Last 30 games")
+        var myEntryArray = [myEntry0, myEntry1, myEntry2, myEntry3, myEntry4, myEntry5, myEntry6]
+        let set1 = RadarChartDataSet(values: myEntryArray[pickingIndexSet1], label: pickerViewOptions[pickingIndexSet1])
         // set color is red
         set1.setColor(UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1))
         set1.fillColor = UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1)
@@ -1269,7 +1285,8 @@ class RadarChartViewController: DemoBaseViewController {
         set1.drawHighlightCircleEnabled = true
         set1.setDrawHighlightIndicators(false)
         
-        let set2 = RadarChartDataSet(values: entries2, label: "TotalAverage")
+        
+        let set2 = RadarChartDataSet(values: myEntryArray[pickingIndexSet2], label: pickerViewOptions[pickingIndexSet2])
         //set color is teal Blue
         set2.setColor(UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1))
         set2.fillColor = UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1)
@@ -1278,6 +1295,7 @@ class RadarChartViewController: DemoBaseViewController {
         set2.lineWidth = 2
         set2.drawHighlightCircleEnabled = true
         set2.setDrawHighlightIndicators(false)
+    
         
         let data = RadarChartData(dataSets: [set1, set2])
         data.setValueFont(.systemFont(ofSize: 8, weight: .light))
@@ -1331,24 +1349,56 @@ class RadarChartViewController: DemoBaseViewController {
             super.handleOption(option, forChartView: chartView)
         }
     }
-    
-  
-    
+
     
     
+    func setPickerView(){
+        
+        let windPicker1 = UIPickerView()
+        let windPicker2 = UIPickerView()
+        windPicker1.delegate = self
+        windPicker2.delegate = self
+        pickerViewTextField.inputView = windPicker1
+        pickerViewTextField.inputView?.tag = 1
+        pickerViewTextField2.inputView = windPicker2
+        pickerViewTextField2.inputView?.tag = 2
+   
+        //  Customization:
+        
+      
+        
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
+    func createToolBar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(RadarChartViewController.dismissKeyboard))
+        
+        toolbar.setItems([doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        
+        pickerViewTextField.inputAccessoryView = toolbar
+        pickerViewTextField2.inputAccessoryView = toolbar
+        
+        //  Customization:
+
+    }
     
+    //Todo: pickerViewOptions Array is two spots, here and view didload. ??
+    let pickerViewOptions = ["All Conditions", "No Wind", "Head Wind", "Tail Wind", "Right-to-Left", "Left-to-Right", ""]
+    let pickerViewOptionsForLabel = ["All Conditions", "No Wind", "Head Wind", "Tail Wind", "Right-to-Left", "Left-to-Right", ""]
     
+
+    @IBOutlet weak var pickerViewTextField: UITextField!
+    @IBOutlet weak var pickerViewTextField2: UITextField!
     
-    
-    
-    
-    
-    
-    
-    
-    
+    var selectedWindOption1String = ""
+    var selectedWindOption2String = ""
     
     
 }
@@ -1357,6 +1407,69 @@ extension RadarChartViewController: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         return activities[Int(value) % activities.count]
     }
+}
+
+extension RadarChartViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+      return  pickerViewOptions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerViewOptions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("tag: \(pickerView.tag)")
+        if pickerView.tag == 1 {
+            selectedWindOption1String = pickerViewOptions[row]
+            pickerViewTextField.text = selectedWindOption1String
+            switch row {
+            case 0: pickingIndexSet1 = 0
+            case 1: pickingIndexSet1 = 1
+            case 2: pickingIndexSet1 = 2
+            case 3: pickingIndexSet1 = 3
+            case 4: pickingIndexSet1 = 4
+            case 5: pickingIndexSet1 = 5
+            case 6: pickingIndexSet1 = 6
+            default: return
+            }
+            
+        } else if pickerView.tag == 2 {
+          selectedWindOption2String = pickerViewOptions[row]
+            pickerViewTextField2.text = selectedWindOption2String
+
+            switch row {
+            case 0: pickingIndexSet2 = 0
+            case 1: pickingIndexSet2 = 1
+            case 2: pickingIndexSet2 = 2
+            case 3: pickingIndexSet2 = 3
+            case 4: pickingIndexSet2 = 4
+            case 5: pickingIndexSet2 = 5
+            case 6: pickingIndexSet2 = 6
+            default: return
+            }
+            
+            
+        }
+       
+        
+        
+        
+        
+      
+       chartView.clearValues()
+       // chartView.clear()
+         chartView.notifyDataSetChanged()
+       viewDidLoad()
+        
+    }
+    
+    
 }
 
 

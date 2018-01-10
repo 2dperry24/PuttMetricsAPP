@@ -11,10 +11,12 @@ import UIKit
 class PuttOfWar: UIViewController {
     
    
-    
+    var playerProfileTemp = String()
+    var playerProfile = ""
     var viewScoresPermission = false
    
     private var undoConstant = 2
+    private var undoConstantArray = [Int] ()
     private var counter = 0
     private var overallCounterForLevel : Double = 0
     var percentageForLevel: Double = 0
@@ -31,6 +33,21 @@ class PuttOfWar: UIViewController {
     @IBOutlet weak var backGroundButtonForPopupDismal: UIButton!
     @IBOutlet weak var backGroundButtonForPopupDismallWhenPassedLevelAppears: UIButton!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        playerProfile = playerProfileTemp
+        popUpView.layer.cornerRadius = 10
+        popUpView.layer.masksToBounds = true
+        popUpViewForPassedLevel.layer.cornerRadius = 10
+        popUpViewForPassedLevel.layer.masksToBounds = true
+        
+        missedButton.backgroundColor = UIColor.flatRed()
+        madeButton.backgroundColor = UIColor.flatGreen()
+        DistanceForCurrentLevelLabel.text = distancesArrayForLabel[indexForDistanceArray]
+    }
+
     
     
     //MARK: wind direction
@@ -64,7 +81,7 @@ class PuttOfWar: UIViewController {
     @IBAction func undoButton(_ sender: UIButton) {
         if overallCounterForLevel > 0 {
             
-            if undoConstant == 1 {
+            if undoConstantArray.last == 1 {
                 overallCounterForLevel -= 1
                 totalPuttsTakenLabel.text = String(Int(overallCounterForLevel))
                     let percentageDisplayValueAfterUndo = calculatePercentageForLevel()
@@ -74,11 +91,9 @@ class PuttOfWar: UIViewController {
                         } else {
                             percentageForLevelLabel.text = "\(numberAfterUndo) %"
                         }
-                changeColorsOfBarsForSender1UndoButton()
-                counter += 1
-                 checkCounterVariable()
-                
-            }  else if undoConstant == 2 {
+                 counter += 1
+                print("counter: \(counter)")
+            }  else if undoConstantArray.last == 2 {
                 overallCounterForLevel -= 1
                 totalPuttsTakenLabel.text = String(Int(overallCounterForLevel))
                 
@@ -91,11 +106,11 @@ class PuttOfWar: UIViewController {
                         percentageForLevelLabel.text = "\(numberAfterUndo) %"
                     }
                 //Counter must go after changeColor func
-                changeColorsOfBarsForSender2UndoButton()
-                counter -= 1
-                checkCounterVariable()
+                 counter -= 1
+                print("counter: \(counter)")
         }
-        
+        changeBarColors()
+        undoConstantArray.removeLast()
     }
         
         
@@ -147,14 +162,7 @@ class PuttOfWar: UIViewController {
     @IBOutlet weak var madeButton: additionButton!
     
     
-    
-    
-    
-    @IBAction func sendToResultsVC(_ sender: Any) {
-            performSegue(withIdentifier: "toLeaderboard" , sender: self )
-       
-    }
-    
+
     
     
     
@@ -166,20 +174,22 @@ class PuttOfWar: UIViewController {
         }
         if sender.tag == 1 {
             undoConstant = 1
+           undoConstantArray.append(undoConstant)
         } else {
             undoConstant = 2
+            undoConstantArray.append(undoConstant)
         }
         
         if sender.tag == 2{
             self.counter = self.counter + 1
             self.percentageForLevel += 1
-            changeColorsOfBarsForSender2()
+           
         }
     
         if sender.tag == 1 {
           
             self.counter = self.counter - 1
-              changeColorsOfBarsForSender1()
+             
         }
         
         checkCounterVariable()
@@ -189,166 +199,137 @@ class PuttOfWar: UIViewController {
         
         let totalCountForLabel = String(Int(overallCounterForLevel))
         totalPuttsTakenLabel.text = totalCountForLabel
-     //   print("Overall count is \(totalCountForLabel)")
-     //   print("Putts made: \(percentageForLevel)")
         let percentageDisplayValue = calculatePercentageForLevel()
         let number = String(Int(percentageDisplayValue.rounded()))
         
         percentageForLevelLabel.text = "\(number) %"
        
+        changeBarColors()
         
     }
     
   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        popUpView.layer.cornerRadius = 10
-        popUpView.layer.masksToBounds = true
-        popUpViewForPassedLevel.layer.cornerRadius = 10
-        popUpViewForPassedLevel.layer.masksToBounds = true
-
-        missedButton.backgroundColor = UIColor.flatRed()
-        madeButton.backgroundColor = UIColor.flatGreen()
-        DistanceForCurrentLevelLabel.text = distancesArrayForLabel[indexForDistanceArray]
-    }
-
-    func changeColorsOfBarsForSender2() {
-        
-        if counter == -5 {
-            self.bar5.backgroundColor = UIColor.lightGray
-        } else if counter == -4 {
-            self.bar5.backgroundColor = UIColor.lightGray
-        }else if counter == -3 {
-            self.bar4.backgroundColor = UIColor.lightGray
-        }else if counter == -2 {
-            self.bar3.backgroundColor = UIColor.lightGray
-        }else if counter == -1 {
-            self.bar2.backgroundColor = UIColor.lightGray
-        }else if counter == 0 {
-            self.bar1.backgroundColor = UIColor.lightGray
-        } else if counter == 1 {
-            self.bar6.backgroundColor = UIColor.flatGreen()
-        } else if counter == 2 {
-            self.bar7.backgroundColor = UIColor.flatGreen()
-        }else if counter == 3 {
-            self.bar8.backgroundColor = UIColor.flatGreen()
-        }else if counter == 4 {
-            self.bar9.backgroundColor = UIColor.flatGreen()
-        }else if counter == 5 {
-            self.bar10.backgroundColor = UIColor.flatGreen()
-        }
-    }
-    
-    func changeColorsOfBarsForSender2UndoButton() {
-        
-       if counter == -4 {
-            self.bar5.backgroundColor = UIColor.lightGray
-        }else if counter == -3 {
-            self.bar4.backgroundColor = UIColor.flatRed()
-        }else if counter == -2 {
-            self.bar3.backgroundColor = UIColor.flatRed()
-        }else if counter == -1 {
-            self.bar2.backgroundColor = UIColor.flatRed()
-        }else if counter == 0 {
-            self.bar1.backgroundColor = UIColor.flatRed()
-        } else if counter == 1 {
-            self.bar6.backgroundColor = UIColor.lightGray
-        } else if counter == 2 {
-            self.bar7.backgroundColor = UIColor.lightGray
-        }else if counter == 3 {
-            self.bar8.backgroundColor = UIColor.lightGray
-        }else if counter == 4 {
-            self.bar9.backgroundColor = UIColor.lightGray
-        }
-    }
-    
-    
-    
-    func changeColorsOfBarsForSender1(){
-        
-        if counter == -5 {
-            self.bar5.backgroundColor = UIColor.flatRed()
-        } else if counter == -4 {
-            self.bar4.backgroundColor = UIColor.flatRed()
-        }else if counter == -3 {
-            self.bar3.backgroundColor = UIColor.flatRed()
-        }else if counter == -2 {
-            self.bar2.backgroundColor = UIColor.flatRed()
-        }else if counter == -1 {
-            self.bar1.backgroundColor = UIColor.flatRed()
-        }else if counter == 0 {
-            self.bar6.backgroundColor = UIColor.lightGray
-        } else if counter == 1 {
-            self.bar7.backgroundColor = UIColor.lightGray
-        } else if counter == 2 {
-            self.bar8.backgroundColor = UIColor.lightGray
-        }else if counter == 3 {
-            self.bar9.backgroundColor = UIColor.lightGray
-        }else if counter == 4 {
-            self.bar10.backgroundColor = UIColor.lightGray
-        }
-    }
-    
-    func changeColorsOfBarsForSender1UndoButton(){
-        
-        if counter == -5 {
-            self.bar5.backgroundColor = UIColor.flatRed()
-        } else if counter == -4 {
-            self.bar4.backgroundColor = UIColor.lightGray
-        }else if counter == -3 {
-            self.bar3.backgroundColor = UIColor.lightGray
-        }else if counter == -2 {
-            self.bar2.backgroundColor = UIColor.lightGray
-        }else if counter == -1 {
-            self.bar1.backgroundColor = UIColor.lightGray
-        }else if counter == 0 {
-            self.bar6.backgroundColor = UIColor.lightGray
-        } else if counter == 1 {
-            self.bar7.backgroundColor = UIColor.lightGray
-        } else if counter == 2 {
-            self.bar8.backgroundColor = UIColor.lightGray
-        }else if counter == 3 {
-            self.bar9.backgroundColor = UIColor.lightGray
-        }else if counter == 4 {
-            self.bar10.backgroundColor = UIColor.lightGray
-        }else if counter == 5 {
-            self.bar10.backgroundColor = UIColor.flatGreen()
-        }
-    }
-    
+//
+//    func changeColorsOfBarsForSender2() {
+//
+//        if counter == -5 {
+//            self.bar5.backgroundColor = UIColor.lightGray
+//        } else if counter == -4 {
+//            self.bar5.backgroundColor = UIColor.lightGray
+//        }else if counter == -3 {
+//            self.bar4.backgroundColor = UIColor.lightGray
+//        }else if counter == -2 {
+//            self.bar3.backgroundColor = UIColor.lightGray
+//        }else if counter == -1 {
+//            self.bar2.backgroundColor = UIColor.lightGray
+//        }else if counter == 0 {
+//            self.bar1.backgroundColor = UIColor.lightGray
+//        } else if counter == 1 {
+//            self.bar6.backgroundColor = UIColor.flatGreen()
+//        } else if counter == 2 {
+//            self.bar7.backgroundColor = UIColor.flatGreen()
+//        }else if counter == 3 {
+//            self.bar8.backgroundColor = UIColor.flatGreen()
+//        }else if counter == 4 {
+//            self.bar9.backgroundColor = UIColor.flatGreen()
+//        }else if counter == 5 {
+//            self.bar10.backgroundColor = UIColor.flatGreen()
+//        }
+//    }
+//
+//    func changeColorsOfBarsForSender2UndoButton() {
+//
+//       if counter == -4 {
+//            self.bar5.backgroundColor = UIColor.lightGray
+//        }else if counter == -3 {
+//            self.bar4.backgroundColor = UIColor.flatRed()
+//        }else if counter == -2 {
+//            self.bar3.backgroundColor = UIColor.flatRed()
+//        }else if counter == -1 {
+//            self.bar2.backgroundColor = UIColor.flatRed()
+//        }else if counter == 0 {
+//            self.bar6.backgroundColor = UIColor.lightGray
+//        } else if counter == 1 {
+//            self.bar7.backgroundColor = UIColor.lightGray
+//        } else if counter == 2 {
+//            self.bar8.backgroundColor = UIColor.lightGray
+//        }else if counter == 3 {
+//            self.bar9.backgroundColor = UIColor.lightGray
+//        }else if counter == 4 {
+//            self.bar9.backgroundColor = UIColor.lightGray
+//        }
+//    }
+//
+//
+//
+//    func changeColorsOfBarsForSender1(){
+//
+//        if counter == -5 {
+//            self.bar5.backgroundColor = UIColor.flatRed()
+//        } else if counter == -4 {
+//            self.bar4.backgroundColor = UIColor.flatRed()
+//        }else if counter == -3 {
+//            self.bar3.backgroundColor = UIColor.flatRed()
+//        }else if counter == -2 {
+//            self.bar2.backgroundColor = UIColor.flatRed()
+//        }else if counter == -1 {
+//            self.bar1.backgroundColor = UIColor.flatRed()
+//        }else if counter == 0 {
+//            self.bar6.backgroundColor = UIColor.lightGray
+//        } else if counter == 1 {
+//            self.bar7.backgroundColor = UIColor.lightGray
+//        } else if counter == 2 {
+//            self.bar8.backgroundColor = UIColor.lightGray
+//        }else if counter == 3 {
+//            self.bar9.backgroundColor = UIColor.lightGray
+//        }else if counter == 4 {
+//            self.bar10.backgroundColor = UIColor.lightGray
+//        }
+//    }
+//
+//    func changeColorsOfBarsForSender1UndoButton(){
+//
+//        if counter == -4 {
+//            self.bar5.backgroundColor = UIColor.lightGray
+//        }else if counter == -3 {
+//            self.bar4.backgroundColor = UIColor.lightGray
+//        }else if counter == -2 {
+//            self.bar3.backgroundColor = UIColor.lightGray
+//        }else if counter == -1 {
+//            self.bar2.backgroundColor = UIColor.lightGray
+//        }else if counter == 0 {
+//            self.bar1.backgroundColor = UIColor.lightGray
+//        } else if counter == 1 {
+//            self.bar6.backgroundColor = UIColor.lightGray
+//        } else if counter == 2 {
+//            self.bar7.backgroundColor = UIColor.lightGray
+//        }else if counter == 3 {
+//            self.bar8.backgroundColor = UIColor.lightGray
+//        }else if counter == 4 {
+//            self.bar9.backgroundColor = UIColor.lightGray
+//        }else if counter == 5 {
+//            self.bar10.backgroundColor = UIColor.flatGreen()
+//        }
+//    }
+//
     
     //Mark: WindDecisionArray is for see which wind condition is most used during the round to be used as the windcondition for the totalRound in ResultsVC.
     var windDecisionArray = [Int]()
     
-    func getMostCommonWindIndexNumber(array: [Int]) -> [Int] {
+    func mostCommonWind (array: [Int]) -> Int {
         
-        var topNumber: [Int] = []
-        var numberDictionary: [Int: Int] = [:]
+        var dictionary: [Int: Int] = [:]
         
-        for number in array {
-            if let count = numberDictionary[number] {
-                numberDictionary[number] = count + 1
-            } else {
-                numberDictionary[number] = 1
-            }
+        // Iterate over the dictionary
+        for b in array {
+            // Every time there is a repeat value add one to that key
+            dictionary[b] = (dictionary[b] ?? 0) + 1
         }
+        let decending = dictionary.sorted(by: {$0.1 > $1.1})
         
-        let highestValue = numberDictionary.values.max()
+        return (decending[0].key)
         
-        for (number, _) in numberDictionary {
-            if numberDictionary[number] == highestValue {
-                topNumber.append(number)
-            }
-        }
-        //return zero if there isn't a mode to indicate no wind
-        if array.count > 1 && highestValue == 1 {
-            return [0]
-        }
-        
-        
-        return topNumber
     }
     
     
@@ -469,7 +450,7 @@ class PuttOfWar: UIViewController {
     @IBAction func closePopup(_ sender: Any) {
        
         
-        CenterConstraintForPopup.constant = -500
+        CenterConstraintForPopup.constant = 500
         UIView.animate(withDuration: 0.1, animations: {
             self.view.layoutIfNeeded()
           self.backGroundButtonForPopupDismal.alpha = 0
@@ -545,21 +526,7 @@ class PuttOfWar: UIViewController {
     }
     
     
-    func checkCounterVariable() {
-        if self.counter > 0 {
-            bar20.backgroundColor = UIColor.flatGreen()
-            bar21.backgroundColor = UIColor.flatGreen()
-            bar22.backgroundColor = UIColor.flatGreen()
-        } else if self.counter < 0 {
-            bar20.backgroundColor = UIColor.flatRed()
-            bar21.backgroundColor = UIColor.flatRed()
-            bar22.backgroundColor = UIColor.flatRed()
-        } else  {
-            bar20.backgroundColor = UIColor.flatGray()
-            bar21.backgroundColor = UIColor.flatGray()
-            bar22.backgroundColor = UIColor.flatGray()
-        }
-    }
+   
     
    
     
@@ -624,6 +591,7 @@ class PuttOfWar: UIViewController {
         percentageForLevelLabel.text = "\(0) %"
         DistanceForCurrentLevelLabel.text = distancesArrayForLabel[indexForDistanceArray]
         viewScoresPermission = false
+        
     }
 
     
@@ -636,8 +604,9 @@ class PuttOfWar: UIViewController {
             secondVC.resultsForScoringArray = ScoresForAllLevelsArray
             secondVC.cellCount = indexForDistanceArray + 1
             
-            secondVC.windDirectionTemp = getMostCommonWindIndexNumber(array: windDecisionArray).first!
-            
+            secondVC.windDirectionTemp = mostCommonWind(array: windDecisionArray)
+            secondVC.playerProfileTemp = playerProfile
+            print("playerprofilethatGotPassed: \(playerProfile)")
             print("windDecisionArray: \(windDecisionArray)")
            
         } else {
@@ -705,5 +674,159 @@ class PuttOfWar: UIViewController {
 
 
 
-   
 
+extension PuttOfWar {
+    
+    func checkCounterVariable() {
+        if self.counter > 0 {
+            bar20.backgroundColor = UIColor.flatGreen()
+            bar21.backgroundColor = UIColor.flatGreen()
+            bar22.backgroundColor = UIColor.flatGreen()
+        } else if self.counter < 0 {
+            bar20.backgroundColor = UIColor.flatRed()
+            bar21.backgroundColor = UIColor.flatRed()
+            bar22.backgroundColor = UIColor.flatRed()
+        } else  {
+            bar20.backgroundColor = UIColor.flatGray()
+            bar21.backgroundColor = UIColor.flatGray()
+            bar22.backgroundColor = UIColor.flatGray()
+        }
+    }
+    
+    func changeBarColors() {
+        
+        
+        switch counter {
+        case -5:
+            self.bar5.backgroundColor = UIColor.flatRed()
+            self.bar4.backgroundColor = UIColor.flatRed()
+            self.bar3.backgroundColor = UIColor.flatRed()
+            self.bar2.backgroundColor = UIColor.flatRed()
+            self.bar1.backgroundColor = UIColor.flatRed()
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+            
+        case -4:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.flatRed()
+            self.bar3.backgroundColor = UIColor.flatRed()
+            self.bar2.backgroundColor = UIColor.flatRed()
+            self.bar1.backgroundColor = UIColor.flatRed()
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case -3:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.flatRed()
+            self.bar2.backgroundColor = UIColor.flatRed()
+            self.bar1.backgroundColor = UIColor.flatRed()
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+            
+        case -2:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.flatRed()
+            self.bar1.backgroundColor = UIColor.flatRed()
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case -1:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.flatRed()
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+            
+        case 0:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.lightGray
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case 1:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.flatGreen()
+            self.bar7.backgroundColor = UIColor.lightGray
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case 2:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.flatGreen()
+            self.bar7.backgroundColor = UIColor.flatGreen()
+            self.bar8.backgroundColor = UIColor.lightGray
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case 3:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.flatGreen()
+            self.bar7.backgroundColor = UIColor.flatGreen()
+            self.bar8.backgroundColor = UIColor.flatGreen()
+            self.bar9.backgroundColor = UIColor.lightGray
+            self.bar10.backgroundColor = UIColor.lightGray
+        case 4:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.flatGreen()
+            self.bar7.backgroundColor = UIColor.flatGreen()
+            self.bar8.backgroundColor = UIColor.flatGreen()
+            self.bar9.backgroundColor = UIColor.flatGreen()
+            self.bar10.backgroundColor = UIColor.lightGray
+        case 5:
+            self.bar5.backgroundColor = UIColor.lightGray
+            self.bar4.backgroundColor = UIColor.lightGray
+            self.bar3.backgroundColor = UIColor.lightGray
+            self.bar2.backgroundColor = UIColor.lightGray
+            self.bar1.backgroundColor = UIColor.lightGray
+            self.bar6.backgroundColor = UIColor.flatGreen()
+            self.bar7.backgroundColor = UIColor.flatGreen()
+            self.bar8.backgroundColor = UIColor.flatGreen()
+            self.bar9.backgroundColor = UIColor.flatGreen()
+            self.bar10.backgroundColor = UIColor.flatGreen()
+            
+            
+    
+        default: print("switch Didn't work correctly")
+        }
+            checkCounterVariable()
+    }
+
+}

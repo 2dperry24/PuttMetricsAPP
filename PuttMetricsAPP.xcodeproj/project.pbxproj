@@ -13,6 +13,12 @@
 		CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */; };
 		CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */; };
 		CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */; };
+		CE38EA251FFC3512008358C9 /* startingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA241FFC3512008358C9 /* startingScreenVC.swift */; };
+		CE38EA271FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */; };
+		CE38EA291FFD5C9A008358C9 /* InTheBagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */; };
+		CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */; };
+		CE38EA2D1FFD7ACD008358C9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */; };
+		CE38EA332005BF64008358C9 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA322005BF64008358C9 /* TicTacToe.swift */; };
 		CE5302071FE17BBB003CC5B1 /* TenFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */; };
 		CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */; };
 		CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */; };
@@ -68,6 +74,12 @@
 		CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceScoring.swift; sourceTree = "<group>"; };
 		CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoringArrayForTugOfWar.swift; sourceTree = "<group>"; };
 		CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPuttOfWarVC.swift; sourceTree = "<group>"; };
+		CE38EA241FFC3512008358C9 /* startingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startingScreenVC.swift; sourceTree = "<group>"; };
+		CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayer_PuttOfWar.swift; sourceTree = "<group>"; };
+		CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheBagVC.swift; sourceTree = "<group>"; };
+		CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheBagDetailsVC.swift; sourceTree = "<group>"; };
+		CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CE38EA322005BF64008358C9 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
 		CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
@@ -225,6 +237,8 @@
 				CE968F291FE951A700571738 /* totalScoreCell.swift */,
 				CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */,
 				CECBE6D51FF3616F004FD8B0 /* Date.swift */,
+				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
+				CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,9 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				CEE82A891FD333B200EA1414 /* AppDelegate.swift */,
+				CE38EA241FFC3512008358C9 /* startingScreenVC.swift */,
+				CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */,
+				CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */,
 				CEE82A8B1FD333B200EA1414 /* ViewController.swift */,
 				CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */,
-				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
 				CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */,
 				CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */,
 				CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */,
@@ -255,6 +271,8 @@
 				CE656D071FF6CA8700816741 /* radarChart.swift */,
 				CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */,
 				CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */,
+				CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */,
+				CE38EA322005BF64008358C9 /* TicTacToe.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -428,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECBE6D21FF2E357004FD8B0 /* GraphsForTotalScore.swift in Sources */,
+				CE38EA291FFD5C9A008358C9 /* InTheBagVC.swift in Sources */,
 				CE5302431FE1B876003CC5B1 /* FortyFeetScores+CoreDataClass.swift in Sources */,
 				CE5302541FE1B876003CC5B1 /* FortyFeetScores+CoreDataProperties.swift in Sources */,
 				CE656D0E1FF6E7AF00816741 /* DemoBaseViewController.swift in Sources */,
@@ -443,8 +462,11 @@
 				CE53024D1FE1B876003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift in Sources */,
 				CE53024F1FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */,
+				CE38EA2D1FFD7ACD008358C9 /* CollectionViewCell.swift in Sources */,
 				CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */,
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
+				CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */,
+				CE38EA251FFC3512008358C9 /* startingScreenVC.swift in Sources */,
 				CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */,
 				CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
@@ -466,6 +488,8 @@
 				CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */,
 				CE656D061FF46E8000816741 /* TotalScores+CoreDataClass.swift in Sources */,
+				CE38EA271FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift in Sources */,
+				CE38EA332005BF64008358C9 /* TicTacToe.swift in Sources */,
 				CE5302501FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift in Sources */,
 				CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */,
 				CE5302481FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift in Sources */,
