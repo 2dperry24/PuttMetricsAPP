@@ -20,19 +20,7 @@ class TicTacToe: UIViewController {
     @IBOutlet weak var player1Container: DesignableView!
     @IBOutlet weak var player2Container: DesignableView!
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     private var lowerBound = 10
     private var uppeerBound = 50
@@ -40,11 +28,11 @@ class TicTacToe: UIViewController {
     private var activePlayer = 1 {
         didSet {
             if activePlayer == 1 {
-                player1Container.backgroundColor = UIColor.red
+                player1Container.backgroundColor = UIColor.flatRed()
                 player2Container.backgroundColor = UIColor.clear
             } else {
                 player1Container.backgroundColor = UIColor.clear
-                player2Container.backgroundColor = UIColor.red
+                player2Container.backgroundColor = UIColor.flatBlue()
             }
         }
     }
@@ -56,7 +44,6 @@ class TicTacToe: UIViewController {
         }
     }
     private var gameHasBeenWon = false
-    private var didHitPuttToPlaceMark = false
     private var gameState = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     private let winningCombinations = [
     // Horizontal winning combinations
@@ -99,101 +86,171 @@ class TicTacToe: UIViewController {
         playerHasWonLabel.alpha = 1
         playAgainOutlet.alpha = 1
         player2Container.backgroundColor = UIColor.clear
-        player1Container.backgroundColor = UIColor.red
+        player1Container.backgroundColor = UIColor.flatRed()
         
     }
 
 
     
-    @IBAction func BTNPressed(_ sender: UIButton) {
-                
-                if (gameState[sender.tag - 1] == 0) && gameIsActive == true {
-                    gameState[sender.tag - 1] = activePlayer
-                    
-                    if (activePlayer == 1) {
-                        sender.setBackgroundImage(UIImage(named:"cross_black"), for: UIControlState())
-                        sender.setTitle("", for: UIControlState())
-                        activePlayer = 2
-                    } else {
-                        sender.setBackgroundImage(UIImage(named:"circle_black"), for: UIControlState())
-                         sender.setTitle("", for: UIControlState())
-                        activePlayer = 1
-                        
-                    }
-                    
-                }
-                
-
-                
-                for combination in winningCombinations {
-
-                    if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] && gameState[combination[2]] == gameState[combination[3]]
-                    {
-                        gameIsActive = false
-                
-                      
-                        
-                        //TODO: use the above positions to set background color for the winning buttons
-                        
-                        
-                        if gameState[combination[0]] == 1
-                        {
-                            BTN1[combination[0]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
-                            BTN1[combination[1]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
-                            BTN1[combination[2]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
-                            BTN1[combination[3]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
-                            
-                            
-                            playerHasWonLabel.text = "Player 1 has won the game!"
-                        }
-                        else
-                        {
-                            BTN1[combination[0]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
-                            BTN1[combination[1]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
-                            BTN1[combination[2]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
-                            BTN1[combination[3]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
-                            
-                            
-                             playerHasWonLabel.text = "Player 2 has won the game!"
-                        }
-                        
-                          playerHasWonLabel.isHidden = false
-                          playAgainOutlet.isHidden = false
-                          player1View.isHidden = true
-                          player2View.isHidden = true
-                          player2Container.isHidden = true
-                          player1Container.isHidden = true
-                          gameHasBeenWon = true
-                        print("gameHasBeenWonHasChangedTOTRUE")
-                    }
-                    
-                }
-      
-  
-                gameIsActive = false
+    @IBAction func BTNPressed(_ senderX: UIButton) {
+        let puttDistance = senderX.titleLabel?.text
+        var borderColor = UIColor()
+        var currentPlayer = ""
+        if activePlayer == 1 {
+           currentPlayer = "Did Player 1 hit the \(puttDistance!) putt?"
+            borderColor = UIColor.flatRed()
+        } else {
+           currentPlayer = "Did Player 2 hit the \(puttDistance!) putt?"
+           borderColor = UIColor.flatBlue()
+        }
+        
+        senderX.layer.borderWidth = 4
+        senderX.layer.borderColor = borderColor.cgColor
+        
+        
+        sendAlert(title: currentPlayer , message: nil, sender: senderX)
+       
+       
      
         
-        
-                for i in gameState {
-                    if i == 0 && gameHasBeenWon == false
-                    {
-                        gameIsActive = true
-                        break
-                    }
-                }
-                
-                if gameIsActive == false && gameHasBeenWon == false
-                {
-                    playerHasWonLabel.text = "IT WAS A DRAW"
-                    playerHasWonLabel.isHidden = false
-                    playAgainOutlet.isHidden = false
-                    player1View.isHidden = true
-                    player2View.isHidden = true
-                }
-                
                 
     }
     
+    
+    
+    func sendAlert(title: String, message: String?, sender: UIButton) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let titleFont = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 18.0)!]
+        let titleAttrString = NSMutableAttributedString(string: title, attributes: titleFont)
+        alert.setValue(titleAttrString, forKey: "attributedTitle")
+        alert.view.alpha = 0.95
+        
+
+      
+        // Creating one button
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.placeMarkForPlayer(sender: sender)
+            sender.layer.borderWidth = 0
+            print("BorderWidthSet: 0")
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            if self.activePlayer == 1 {
+                self.activePlayer = 2
+            } else {
+                self.activePlayer = 1
+            }
+             sender.layer.borderWidth = 0
+        }))
+        alert.addAction(UIAlertAction(title: "Re-pick spot", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+             sender.layer.borderWidth = 0
+            print("Position on board was canceled")
+        }))
+        self.present(alert, animated: true, completion: nil)
+      
+      
+    }
+    
+    
+    
+    
+    
+    
+    
+    func placeMarkForPlayer(sender: UIButton) {
+        
+        
+        if (gameState[sender.tag - 1] == 0) && gameIsActive == true {
+            gameState[sender.tag - 1] = activePlayer
+            
+            if (activePlayer == 1) {
+                sender.setBackgroundImage(UIImage(named:"cross_black"), for: UIControlState())
+                sender.setTitle("", for: UIControlState())
+                activePlayer = 2
+            } else {
+                sender.setBackgroundImage(UIImage(named:"circle_black"), for: UIControlState())
+                sender.setTitle("", for: UIControlState())
+                activePlayer = 1
+                
+            }
+            
+        }
+        
+        
+        
+        for combination in winningCombinations {
+            
+            if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] && gameState[combination[2]] == gameState[combination[3]]
+            {
+                gameIsActive = false
+                
+                
+                
+                //TODO: use the above positions to set background color for the winning buttons
+                
+                
+                if gameState[combination[0]] == 1
+                {
+                    BTN1[combination[0]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
+                    BTN1[combination[1]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
+                    BTN1[combination[2]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
+                    BTN1[combination[3]].setBackgroundImage(UIImage(named:"cross_red"), for: UIControlState())
+                    
+                    
+                    playerHasWonLabel.text = "Player 1 has won the game!"
+                }
+                else
+                {
+                    BTN1[combination[0]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
+                    BTN1[combination[1]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
+                    BTN1[combination[2]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
+                    BTN1[combination[3]].setBackgroundImage(UIImage(named:"circle_red"), for: UIControlState())
+                    
+                    
+                    playerHasWonLabel.text = "Player 2 has won the game!"
+                }
+                
+                playerHasWonLabel.isHidden = false
+                playAgainOutlet.isHidden = false
+                player1View.isHidden = true
+                player2View.isHidden = true
+                player2Container.isHidden = true
+                player1Container.isHidden = true
+                gameHasBeenWon = true
+                print("gameHasBeenWonHasChangedTOTRUE")
+            }
+            
+        }
+        
+        
+        gameIsActive = false
+        
+        
+        
+        for i in gameState {
+            if i == 0 && gameHasBeenWon == false
+            {
+                gameIsActive = true
+                break
+            }
+        }
+        
+        if gameIsActive == false && gameHasBeenWon == false
+        {
+            playerHasWonLabel.text = "IT WAS A DRAW"
+            playerHasWonLabel.isHidden = false
+            playAgainOutlet.isHidden = false
+            player1View.isHidden = true
+            player2View.isHidden = true
+        }
+        
+        
+        
+        
+    }
     
     @IBAction func playAgain(_ sender: UIButton) {
         gameState = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
