@@ -43,6 +43,7 @@
 		CE656D081FF6CA8700816741 /* radarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D071FF6CA8700816741 /* radarChart.swift */; };
 		CE656D0E1FF6E7AF00816741 /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */; };
 		CE656D101FF6E82600816741 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */; };
+		CE7FB94B200A643600201A22 /* TicTacToeSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */; };
 		CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F261FE5F0B300571738 /* icon attributions.swift */; };
 		CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F291FE951A700571738 /* totalScoreCell.swift */; };
 		CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */; };
@@ -104,6 +105,7 @@
 		CE656D071FF6CA8700816741 /* radarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radarChart.swift; sourceTree = "<group>"; };
 		CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
 		CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
+		CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeSetUpVC.swift; sourceTree = "<group>"; };
 		CE968F261FE5F0B300571738 /* icon attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "icon attributions.swift"; sourceTree = "<group>"; };
 		CE968F291FE951A700571738 /* totalScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalScoreCell.swift; sourceTree = "<group>"; };
 		CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusExplantion.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */,
 				CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */,
 				CE38EA322005BF64008358C9 /* TicTacToe.swift */,
+				CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
 				CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */,
 				CE38EA251FFC3512008358C9 /* startingScreenVC.swift in Sources */,
+				CE7FB94B200A643600201A22 /* TicTacToeSetUpVC.swift in Sources */,
 				CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */,
 				CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
