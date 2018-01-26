@@ -13,6 +13,11 @@ pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'ConcentricProgressRingView'
 pod 'Charts'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
+
+
 
 end
 post_install do |installer|

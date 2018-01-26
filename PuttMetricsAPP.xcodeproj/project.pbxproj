@@ -13,7 +13,7 @@
 		CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */; };
 		CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */; };
 		CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */; };
-		CE38EA251FFC3512008358C9 /* startingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA241FFC3512008358C9 /* startingScreenVC.swift */; };
+		CE38EA251FFC3512008358C9 /* homeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA241FFC3512008358C9 /* homeScreenVC.swift */; };
 		CE38EA271FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */; };
 		CE38EA291FFD5C9A008358C9 /* InTheBagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */; };
 		CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */; };
@@ -38,12 +38,24 @@
 		CE5302521FE1B876003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */; };
 		CE5302541FE1B876003CC5B1 /* FortyFeetScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */; };
 		CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */; };
+		CE5C8BC0201B829300D8E8F7 /* passwordResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C8BBF201B829300D8E8F7 /* passwordResetVC.swift */; };
 		CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D031FF46E7F00816741 /* TotalScores+CoreDataProperties.swift */; };
 		CE656D061FF46E8000816741 /* TotalScores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D041FF46E7F00816741 /* TotalScores+CoreDataClass.swift */; };
 		CE656D081FF6CA8700816741 /* radarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D071FF6CA8700816741 /* radarChart.swift */; };
 		CE656D0E1FF6E7AF00816741 /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */; };
 		CE656D101FF6E82600816741 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */; };
 		CE7FB94B200A643600201A22 /* TicTacToeSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */; };
+		CE7FB94D200D092A00201A22 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94C200D092A00201A22 /* Emitter.swift */; };
+		CE7FB94F200D464900201A22 /* UIView + Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94E200D464900201A22 /* UIView + Gradient.swift */; };
+		CE7FB951200FB89A00201A22 /* homeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB950200FB89A00201A22 /* homeScreenCell.swift */; };
+		CE7FB9562010F8AB00201A22 /* GameSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB9552010F8AB00201A22 /* GameSelectionVC.swift */; };
+		CE7FB9582010F8EC00201A22 /* ResultsSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB9572010F8EC00201A22 /* ResultsSelectionVC.swift */; };
+		CE7FB95A2010F90A00201A22 /* SettingsSelectonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB9592010F90A00201A22 /* SettingsSelectonVC.swift */; };
+		CE9577072016B24D000422A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9577052016B138000422A1 /* GoogleService-Info.plist */; };
+		CE9577092016BB3C000422A1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9577082016BB3C000422A1 /* SignUpVC.swift */; };
+		CE95770B20177FCC000422A1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95770A20177FCC000422A1 /* SignInVC.swift */; };
+		CE95770D201783B7000422A1 /* signOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95770C201783B7000422A1 /* signOutVC.swift */; };
+		CE95770F20178B09000422A1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95770E20178B09000422A1 /* AlertController.swift */; };
 		CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F261FE5F0B300571738 /* icon attributions.swift */; };
 		CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F291FE951A700571738 /* totalScoreCell.swift */; };
 		CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */; };
@@ -57,7 +69,6 @@
 		CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D51FF3616F004FD8B0 /* Date.swift */; };
 		CEE5E2B31FF6EC1000FEA095 /* RadarMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE5E2B21FF6EC1000FEA095 /* RadarMarkerView.xib */; };
 		CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A891FD333B200EA1414 /* AppDelegate.swift */; };
-		CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE82A8B1FD333B200EA1414 /* ViewController.swift */; };
 		CEE82A911FD333B200EA1414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A901FD333B200EA1414 /* Assets.xcassets */; };
 		CEE82A941FD333B200EA1414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A921FD333B200EA1414 /* LaunchScreen.storyboard */; };
 		CEE82AA01FD3360B00EA1414 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE82A9F1FD3360B00EA1414 /* Default-568h@2x.png */; };
@@ -75,12 +86,13 @@
 		CE1FCEBB1FD8A31D002A8263 /* DistanceScoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceScoring.swift; sourceTree = "<group>"; };
 		CE1FCEBD1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoringArrayForTugOfWar.swift; sourceTree = "<group>"; };
 		CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPuttOfWarVC.swift; sourceTree = "<group>"; };
-		CE38EA241FFC3512008358C9 /* startingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startingScreenVC.swift; sourceTree = "<group>"; };
+		CE38EA241FFC3512008358C9 /* homeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenVC.swift; sourceTree = "<group>"; };
 		CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayer_PuttOfWar.swift; sourceTree = "<group>"; };
 		CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheBagVC.swift; sourceTree = "<group>"; };
 		CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheBagDetailsVC.swift; sourceTree = "<group>"; };
 		CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CE38EA322005BF64008358C9 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
+		CE4A56C220185AC20089042F /* PuttMetricsAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PuttMetricsAPP.entitlements; sourceTree = "<group>"; };
 		CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TenFeetScores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
@@ -100,12 +112,24 @@
 		CE53023E1FE1B875003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FiftyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FiftyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		CE5302401FE1B875003CC5B1 /* FortyFeetScores+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FortyFeetScores+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/FortyFeetScores+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		CE5302411FE1B875003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TwentyFiveFeetScores+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Supporting Files/coreData/TwentyFiveFeetScores+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE5C8BBF201B829300D8E8F7 /* passwordResetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordResetVC.swift; sourceTree = "<group>"; };
 		CE656D031FF46E7F00816741 /* TotalScores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataProperties.swift"; path = "Pods/TotalScores+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		CE656D041FF46E7F00816741 /* TotalScores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TotalScores+CoreDataClass.swift"; path = "Pods/TotalScores+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		CE656D071FF6CA8700816741 /* radarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radarChart.swift; sourceTree = "<group>"; };
 		CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
 		CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
 		CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeSetUpVC.swift; sourceTree = "<group>"; };
+		CE7FB94C200D092A00201A22 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		CE7FB94E200D464900201A22 /* UIView + Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Gradient.swift"; sourceTree = "<group>"; };
+		CE7FB950200FB89A00201A22 /* homeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenCell.swift; sourceTree = "<group>"; };
+		CE7FB9552010F8AB00201A22 /* GameSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionVC.swift; sourceTree = "<group>"; };
+		CE7FB9572010F8EC00201A22 /* ResultsSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSelectionVC.swift; sourceTree = "<group>"; };
+		CE7FB9592010F90A00201A22 /* SettingsSelectonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSelectonVC.swift; sourceTree = "<group>"; };
+		CE9577052016B138000422A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE9577082016BB3C000422A1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CE95770A20177FCC000422A1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		CE95770C201783B7000422A1 /* signOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signOutVC.swift; sourceTree = "<group>"; };
+		CE95770E20178B09000422A1 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		CE968F261FE5F0B300571738 /* icon attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "icon attributions.swift"; sourceTree = "<group>"; };
 		CE968F291FE951A700571738 /* totalScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalScoreCell.swift; sourceTree = "<group>"; };
 		CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusExplantion.swift; sourceTree = "<group>"; };
@@ -120,7 +144,6 @@
 		CEE5E2B21FF6EC1000FEA095 /* RadarMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
 		CEE82A861FD333B200EA1414 /* PuttMetricsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuttMetricsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE82A891FD333B200EA1414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEE82A8B1FD333B200EA1414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEE82A901FD333B200EA1414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE82A931FD333B200EA1414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE82A951FD333B200EA1414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +184,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE7FB9522010F78F00201A22 /* games */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */,
+				CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */,
+				CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */,
+				CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */,
+				CE38EA322005BF64008358C9 /* TicTacToe.swift */,
+				CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */,
+				CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */,
+			);
+			path = games;
+			sourceTree = "<group>";
+		};
+		CE7FB9542010F83B00201A22 /* DataCharts */ = {
+			isa = PBXGroup;
+			children = (
+				CE656D071FF6CA8700816741 /* radarChart.swift */,
+			);
+			path = DataCharts;
+			sourceTree = "<group>";
+		};
 		CE968F281FE9515900571738 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				CE968F301FEA484300571738 /* DesignableView.swift */,
+				CE7FB94C200D092A00201A22 /* Emitter.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -219,6 +265,7 @@
 		CEE82A881FD333B200EA1414 /* PuttMetricsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				CE4A56C220185AC20089042F /* PuttMetricsAPP.entitlements */,
 				CE968F2F1FEA480F00571738 /* IBDesignables */,
 				CEE82AA31FD338B800EA1414 /* Subclasses */,
 				CEE82A9B1FD3350B00EA1414 /* Model */,
@@ -241,6 +288,8 @@
 				CECBE6D51FF3616F004FD8B0 /* Date.swift */,
 				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
 				CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */,
+				CE7FB950200FB89A00201A22 /* homeScreenCell.swift */,
+				CE95770E20178B09000422A1 /* AlertController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +301,7 @@
 				CEE82AC81FD3F18F00EA1414 /* main.storyboard */,
 				CEE5E2B21FF6EC1000FEA095 /* RadarMarkerView.xib */,
 				CE968F341FED997400571738 /* FivePutts.xib */,
+				CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,23 +309,22 @@
 		CEE82A9D1FD3352400EA1414 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE7FB9542010F83B00201A22 /* DataCharts */,
+				CE7FB9522010F78F00201A22 /* games */,
 				CEE82A891FD333B200EA1414 /* AppDelegate.swift */,
-				CE38EA241FFC3512008358C9 /* startingScreenVC.swift */,
-				CE38EA261FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift */,
+				CE95770A20177FCC000422A1 /* SignInVC.swift */,
+				CE9577082016BB3C000422A1 /* SignUpVC.swift */,
+				CE95770C201783B7000422A1 /* signOutVC.swift */,
+				CE38EA241FFC3512008358C9 /* homeScreenVC.swift */,
 				CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */,
-				CEE82A8B1FD333B200EA1414 /* ViewController.swift */,
-				CEE82AA11FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift */,
-				CE1FCEB71FD73C0A002A8263 /* PuttOfWar.swift */,
-				CE1FCEBF1FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift */,
-				CE968F2D1FEA3ED300571738 /* BonusExplantion.swift */,
 				CE968F321FED92B500571738 /* ProgressRings.swift */,
 				CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */,
-				CE656D071FF6CA8700816741 /* radarChart.swift */,
-				CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */,
 				CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */,
 				CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */,
-				CE38EA322005BF64008358C9 /* TicTacToe.swift */,
-				CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */,
+				CE7FB9552010F8AB00201A22 /* GameSelectionVC.swift */,
+				CE7FB9572010F8EC00201A22 /* ResultsSelectionVC.swift */,
+				CE7FB9592010F90A00201A22 /* SettingsSelectonVC.swift */,
+				CE5C8BBF201B829300D8E8F7 /* passwordResetVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +332,7 @@
 		CEE82A9E1FD3356900EA1414 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE9577052016B138000422A1 /* GoogleService-Info.plist */,
 				CE968F281FE9515900571738 /* coreData */,
 				CEE82A951FD333B200EA1414 /* Info.plist */,
 				CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */,
@@ -296,6 +346,7 @@
 			children = (
 				CEE82AA41FD3390700EA1414 /* ToggleButton.swift */,
 				CE1FCEB51FD73BC6002A8263 /* RoundedEdgesLabels.swift */,
+				CE7FB94E200D464900201A22 /* UIView + Gradient.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -336,6 +387,11 @@
 					CEE82A851FD333B200EA1414 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -366,6 +422,7 @@
 				CE968F351FED997400571738 /* FivePutts.xib in Resources */,
 				CEE82AA01FD3360B00EA1414 /* Default-568h@2x.png in Resources */,
 				CEE82A911FD333B200EA1414 /* Assets.xcassets in Resources */,
+				CE9577072016B24D000422A1 /* GoogleService-Info.plist in Resources */,
 				CEE82AC91FD3F18F00EA1414 /* main.storyboard in Resources */,
 				CEE5E2B31FF6EC1000FEA095 /* RadarMarkerView.xib in Resources */,
 			);
@@ -414,9 +471,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PuttMetricsAPP/Pods-PuttMetricsAPP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ConcentricProgressRingView/ConcentricProgressRingView.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework",
@@ -426,9 +487,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ConcentricProgressRingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LionheartExtensions.framework",
@@ -448,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE95770B20177FCC000422A1 /* SignInVC.swift in Sources */,
 				CECBE6D21FF2E357004FD8B0 /* GraphsForTotalScore.swift in Sources */,
 				CE38EA291FFD5C9A008358C9 /* InTheBagVC.swift in Sources */,
 				CE5302431FE1B876003CC5B1 /* FortyFeetScores+CoreDataClass.swift in Sources */,
@@ -461,17 +527,21 @@
 				CE53024C1FE1B876003CC5B1 /* FiftyFeetScores+CoreDataClass.swift in Sources */,
 				CE1FCEBC1FD8A31D002A8263 /* DistanceScoring.swift in Sources */,
 				CE1FCEB81FD73C0A002A8263 /* PuttOfWar.swift in Sources */,
-				CEE82A8C1FD333B200EA1414 /* ViewController.swift in Sources */,
 				CE53024D1FE1B876003CC5B1 /* TwentyFeetScores+CoreDataProperties.swift in Sources */,
+				CE9577092016BB3C000422A1 /* SignUpVC.swift in Sources */,
+				CE95770F20178B09000422A1 /* AlertController.swift in Sources */,
 				CE53024F1FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */,
 				CE38EA2D1FFD7ACD008358C9 /* CollectionViewCell.swift in Sources */,
+				CE7FB95A2010F90A00201A22 /* SettingsSelectonVC.swift in Sources */,
 				CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */,
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
 				CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */,
-				CE38EA251FFC3512008358C9 /* startingScreenVC.swift in Sources */,
+				CE5C8BC0201B829300D8E8F7 /* passwordResetVC.swift in Sources */,
+				CE38EA251FFC3512008358C9 /* homeScreenVC.swift in Sources */,
 				CE7FB94B200A643600201A22 /* TicTacToeSetUpVC.swift in Sources */,
 				CE5302091FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift in Sources */,
+				CE95770D201783B7000422A1 /* signOutVC.swift in Sources */,
 				CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
 				CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */,
@@ -482,7 +552,9 @@
 				CE5302491FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE968F311FEA484300571738 /* DesignableView.swift in Sources */,
 				CE5302521FE1B876003CC5B1 /* FiftyFeetScores+CoreDataProperties.swift in Sources */,
+				CE7FB951200FB89A00201A22 /* homeScreenCell.swift in Sources */,
 				CE5302451FE1B876003CC5B1 /* TwentyFeetScores+CoreDataClass.swift in Sources */,
+				CE7FB9582010F8EC00201A22 /* ResultsSelectionVC.swift in Sources */,
 				CE53024A1FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */,
 				CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */,
@@ -497,6 +569,9 @@
 				CE5302501FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataClass.swift in Sources */,
 				CE53022D1FE17ECA003CC5B1 /* PersistenceService.swift in Sources */,
 				CE5302481FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataProperties.swift in Sources */,
+				CE7FB94D200D092A00201A22 /* Emitter.swift in Sources */,
+				CE7FB9562010F8AB00201A22 /* GameSelectionVC.swift in Sources */,
+				CE7FB94F200D464900201A22 /* UIView + Gradient.swift in Sources */,
 				CE1FCEBE1FD8D5E9002A8263 /* TotalScoringArrayForTugOfWar.swift in Sources */,
 				CEB2C48D1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift in Sources */,
 			);
@@ -628,8 +703,15 @@
 			baseConfigurationReference = 0D7106F2E8A4EFE56BEABC6E /* Pods-PuttMetricsAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PuttMetricsAPP/PuttMetricsAPP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25TE3D4ELW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PuttMetricsAPP/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -645,8 +727,15 @@
 			baseConfigurationReference = 30404310E512D0160C3F37A2 /* Pods-PuttMetricsAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PuttMetricsAPP/PuttMetricsAPP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25TE3D4ELW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+					"$(PROJECT_DIR)/PuttMetricsAPP/Facebook\\ SDK",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PuttMetricsAPP/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
