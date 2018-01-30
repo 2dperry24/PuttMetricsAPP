@@ -11,14 +11,14 @@ import UIKit
 class InTheBagDetailsVC: UIViewController {
 
     
-    var selection: String!
-    @IBOutlet private weak var detailsLabel: UILabel!
-    
+    var selection: UIImage!
+
+    @IBOutlet weak var Imagedetails: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailsLabel.text = selection
+       Imagedetails.image = selection
         
     }
 

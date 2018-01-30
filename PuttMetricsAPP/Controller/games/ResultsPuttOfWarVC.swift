@@ -161,6 +161,8 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
 
     if playerProfile == "guest" {
        
+        
+    } else {
         let fetchRequestMaxScore: NSFetchRequest<TotalScores> = TotalScores.fetchRequest()
         let sort = NSSortDescriptor(keyPath: \TotalScores.total, ascending: false)
         fetchRequestMaxScore.sortDescriptors = [sort]
@@ -174,8 +176,6 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
-    } else {
 
 
         let totalScoreForThatAttempt =  totalScoreToAppendToCoreData
@@ -230,7 +230,8 @@ class ResultsPuttOfWarVC: UIViewController, UITableViewDelegate, UITableViewData
                                                             do {
                                                                 let scores10 = try PersistenceService.context.fetch(fetchRequest)
                                                                 self.scoresfromTen = scores10
-                                                                //   print("scorefromTen: \(scoresfromTen)")
+                                                                print("Dustin DUSTIN DUSTIN DSDODJSFOJSDOFJSDOFSDJSDFO")
+                                                                print("scorefromTen: \(scoresfromTen)")
                                                                 //    self.tableViewForScores.reloadData()
                                                             } catch { print("Reloading data didn't work, hence the catch 10")}
 

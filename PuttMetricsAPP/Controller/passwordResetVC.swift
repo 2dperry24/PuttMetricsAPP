@@ -65,7 +65,8 @@ class passwordResetVC: UIViewController {
     func resetPassword(email: String) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error != nil {
-                AlertController.showAlert(self, title: "Error", message: (error?.localizedDescription)!)
+                print(error?.localizedDescription ?? "")
+                AlertController.showAlert(self, title: "Error", message: ("There is no user record corresponding to this email address"))
             } else {
                  AlertController.showAlert(self, title: "Success", message: "An email with instructions to reset your password has been sent \(email). Thank you.")
                 self.emailTF.text = ""

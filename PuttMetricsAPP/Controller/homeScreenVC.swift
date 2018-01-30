@@ -73,7 +73,7 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             } else if indexPath.row == 1 {
                 performSegue(withIdentifier: "sendToResultsSelectionVC", sender: self)
             }  else if indexPath.row == 2 {
-                    print("send to in the bag VC")
+                    performSegue(withIdentifier: "sendToInTheBagVC", sender: self)
             } else if indexPath.row == 3 {
                  performSegue(withIdentifier: "sendToSettingSelectionVC", sender: self)
             } else if indexPath.row == 4 {
