@@ -46,10 +46,8 @@
 		CE656D101FF6E82600816741 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */; };
 		CE767D12201BD09000B4A43D /* IntheBag2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D11201BD09000B4A43D /* IntheBag2VC.swift */; };
 		CE767D14201D28D100B4A43D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D13201D28D000B4A43D /* GradientView.swift */; };
-		CE767D16201D296100B4A43D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D15201D296100B4A43D /* DataSource.swift */; };
+		CE767D16201D296100B4A43D /* InTheBagDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D15201D296100B4A43D /* InTheBagDataSource.swift */; };
 		CE767D1C201D3A6700B4A43D /* Discs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D1B201D3A6700B4A43D /* Discs.swift */; };
-		CE767D2F201E656300B4A43D /* CollectViewImages+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D2D201E656200B4A43D /* CollectViewImages+CoreDataClass.swift */; };
-		CE767D30201E656300B4A43D /* CollectViewImages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D2E201E656300B4A43D /* CollectViewImages+CoreDataProperties.swift */; };
 		CE7FB94B200A643600201A22 /* TicTacToeSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */; };
 		CE7FB94D200D092A00201A22 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94C200D092A00201A22 /* Emitter.swift */; };
 		CE7FB94F200D464900201A22 /* UIView + Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FB94E200D464900201A22 /* UIView + Gradient.swift */; };
@@ -71,6 +69,9 @@
 		CEB2C48D1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */; };
 		CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB2C4AF1FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld */; };
 		CEC871AD20202952003A2AFB /* PictureInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC871AC20202952003A2AFB /* PictureInfoVC.swift */; };
+		CEC871B020211B00003A2AFB /* CollectViewImages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC871AE20211AFF003A2AFB /* CollectViewImages+CoreDataProperties.swift */; };
+		CEC871B120211B00003A2AFB /* CollectViewImages+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC871AF20211B00003A2AFB /* CollectViewImages+CoreDataClass.swift */; };
+		CEC871B3202186B6003A2AFB /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC871B2202186B6003A2AFB /* SectionHeader.swift */; };
 		CECBE6D21FF2E357004FD8B0 /* GraphsForTotalScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */; };
 		CECBE6D41FF3147B004FD8B0 /* chartsVCcustomcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */; };
 		CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE6D51FF3616F004FD8B0 /* Date.swift */; };
@@ -127,10 +128,8 @@
 		CE656D0F1FF6E82600816741 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
 		CE767D11201BD09000B4A43D /* IntheBag2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntheBag2VC.swift; sourceTree = "<group>"; };
 		CE767D13201D28D000B4A43D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		CE767D15201D296100B4A43D /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		CE767D15201D296100B4A43D /* InTheBagDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheBagDataSource.swift; sourceTree = "<group>"; };
 		CE767D1B201D3A6700B4A43D /* Discs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discs.swift; sourceTree = "<group>"; };
-		CE767D2D201E656200B4A43D /* CollectViewImages+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CollectViewImages+CoreDataClass.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Controller/CollectViewImages+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		CE767D2E201E656300B4A43D /* CollectViewImages+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CollectViewImages+CoreDataProperties.swift"; path = "/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Controller/CollectViewImages+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		CE7FB94A200A643600201A22 /* TicTacToeSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeSetUpVC.swift; sourceTree = "<group>"; };
 		CE7FB94C200D092A00201A22 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 		CE7FB94E200D464900201A22 /* UIView + Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Gradient.swift"; sourceTree = "<group>"; };
@@ -152,6 +151,9 @@
 		CEB2C48C1FDF0E8400F4BC5E /* tableViewCellResultsPuttOfWarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellResultsPuttOfWarTableViewCell.swift; sourceTree = "<group>"; };
 		CEB2C4B01FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PuttMetricsAPP.xcdatamodel; sourceTree = "<group>"; };
 		CEC871AC20202952003A2AFB /* PictureInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInfoVC.swift; sourceTree = "<group>"; };
+		CEC871AE20211AFF003A2AFB /* CollectViewImages+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CollectViewImages+CoreDataProperties.swift"; path = "../../../CollectViewImages+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CEC871AF20211B00003A2AFB /* CollectViewImages+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CollectViewImages+CoreDataClass.swift"; path = "../../../CollectViewImages+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEC871B2202186B6003A2AFB /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsForTotalScore.swift; sourceTree = "<group>"; };
 		CECBE6D31FF3147B004FD8B0 /* chartsVCcustomcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartsVCcustomcell.swift; sourceTree = "<group>"; };
 		CECBE6D51FF3616F004FD8B0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -244,8 +246,8 @@
 				CE5302051FE17BBB003CC5B1 /* TenFeetScores+CoreDataClass.swift */,
 				CE5302031FE17BBA003CC5B1 /* TenFeetScores+CoreDataProperties.swift */,
 				CE53022C1FE17ECA003CC5B1 /* PersistenceService.swift */,
-				CE767D2D201E656200B4A43D /* CollectViewImages+CoreDataClass.swift */,
-				CE767D2E201E656300B4A43D /* CollectViewImages+CoreDataProperties.swift */,
+				CEC871AF20211B00003A2AFB /* CollectViewImages+CoreDataClass.swift */,
+				CEC871AE20211AFF003A2AFB /* CollectViewImages+CoreDataProperties.swift */,
 			);
 			path = coreData;
 			sourceTree = "<group>";
@@ -304,7 +306,8 @@
 				CECBE6D51FF3616F004FD8B0 /* Date.swift */,
 				CEE82AC61FD3C41200EA1414 /* FivePuttsXib.swift */,
 				CE38EA2C1FFD7ACD008358C9 /* CollectionViewCell.swift */,
-				CE767D15201D296100B4A43D /* DataSource.swift */,
+				CEC871B2202186B6003A2AFB /* SectionHeader.swift */,
+				CE767D15201D296100B4A43D /* InTheBagDataSource.swift */,
 				CE767D1B201D3A6700B4A43D /* Discs.swift */,
 				CE7FB950200FB89A00201A22 /* homeScreenCell.swift */,
 				CE95770E20178B09000422A1 /* AlertController.swift */,
@@ -337,15 +340,15 @@
 				CE38EA241FFC3512008358C9 /* homeScreenVC.swift */,
 				CE38EA281FFD5C9A008358C9 /* InTheBagVC.swift */,
 				CE767D11201BD09000B4A43D /* IntheBag2VC.swift */,
+				CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */,
+				CEC871AC20202952003A2AFB /* PictureInfoVC.swift */,
 				CE968F321FED92B500571738 /* ProgressRings.swift */,
 				CECBE6D11FF2E357004FD8B0 /* GraphsForTotalScore.swift */,
 				CE656D0D1FF6E7AE00816741 /* DemoBaseViewController.swift */,
-				CE38EA2A1FFD68E6008358C9 /* InTheBagDetailsVC.swift */,
 				CE7FB9552010F8AB00201A22 /* GameSelectionVC.swift */,
 				CE7FB9572010F8EC00201A22 /* ResultsSelectionVC.swift */,
 				CE7FB9592010F90A00201A22 /* SettingsSelectonVC.swift */,
 				CE5C8BBF201B829300D8E8F7 /* passwordResetVC.swift */,
-				CEC871AC20202952003A2AFB /* PictureInfoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -543,7 +546,6 @@
 				CE968F2A1FE951A700571738 /* totalScoreCell.swift in Sources */,
 				CE767D12201BD09000B4A43D /* IntheBag2VC.swift in Sources */,
 				CE968F331FED92B500571738 /* ProgressRings.swift in Sources */,
-				CE767D2F201E656300B4A43D /* CollectViewImages+CoreDataClass.swift in Sources */,
 				CE53024E1FE1B876003CC5B1 /* ThirtyFeetScores+CoreDataProperties.swift in Sources */,
 				CEC871AD20202952003A2AFB /* PictureInfoVC.swift in Sources */,
 				CE656D081FF6CA8700816741 /* radarChart.swift in Sources */,
@@ -558,7 +560,7 @@
 				CEE82AA21FD3376500EA1414 /* FivePuttsPerLevelGameVC.swift in Sources */,
 				CE38EA2D1FFD7ACD008358C9 /* CollectionViewCell.swift in Sources */,
 				CE7FB95A2010F90A00201A22 /* SettingsSelectonVC.swift in Sources */,
-				CE767D16201D296100B4A43D /* DataSource.swift in Sources */,
+				CE767D16201D296100B4A43D /* InTheBagDataSource.swift in Sources */,
 				CECBE6D61FF3616F004FD8B0 /* Date.swift in Sources */,
 				CE968F271FE5F0B300571738 /* icon attributions.swift in Sources */,
 				CE38EA2B1FFD68E6008358C9 /* InTheBagDetailsVC.swift in Sources */,
@@ -569,7 +571,7 @@
 				CE95770D201783B7000422A1 /* signOutVC.swift in Sources */,
 				CE656D051FF46E8000816741 /* TotalScores+CoreDataProperties.swift in Sources */,
 				CE1FCEC01FD9A8F7002A8263 /* ResultsPuttOfWarVC.swift in Sources */,
-				CE767D30201E656300B4A43D /* CollectViewImages+CoreDataProperties.swift in Sources */,
+				CEC871B020211B00003A2AFB /* CollectViewImages+CoreDataProperties.swift in Sources */,
 				CEE82A8A1FD333B200EA1414 /* AppDelegate.swift in Sources */,
 				CEE82AC71FD3C41200EA1414 /* FivePuttsXib.swift in Sources */,
 				CEE82AA51FD3390700EA1414 /* ToggleButton.swift in Sources */,
@@ -585,11 +587,13 @@
 				CE53024A1FE1B876003CC5B1 /* FortyFiveFeetScores+CoreDataProperties.swift in Sources */,
 				CEB2C4B11FE0231000F4BC5E /* PuttMetricsAPP.xcdatamodeld in Sources */,
 				CE1FCEB61FD73BC6002A8263 /* RoundedEdgesLabels.swift in Sources */,
+				CEC871B3202186B6003A2AFB /* SectionHeader.swift in Sources */,
 				CE5302471FE1B876003CC5B1 /* ThirtyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE53024B1FE1B876003CC5B1 /* FifteenFeetScores+CoreDataClass.swift in Sources */,
 				CE656D101FF6E82600816741 /* RadarMarkerView.swift in Sources */,
 				CE5302551FE1B876003CC5B1 /* TwentyFiveFeetScores+CoreDataClass.swift in Sources */,
 				CE968F2E1FEA3ED300571738 /* BonusExplantion.swift in Sources */,
+				CEC871B120211B00003A2AFB /* CollectViewImages+CoreDataClass.swift in Sources */,
 				CE656D061FF46E8000816741 /* TotalScores+CoreDataClass.swift in Sources */,
 				CE38EA271FFC3CCE008358C9 /* ChoosePlayer_PuttOfWar.swift in Sources */,
 				CE767D14201D28D100B4A43D /* GradientView.swift in Sources */,

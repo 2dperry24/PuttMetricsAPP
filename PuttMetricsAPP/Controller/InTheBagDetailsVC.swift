@@ -10,15 +10,42 @@ import UIKit
 
 class InTheBagDetailsVC: UIViewController {
 
+//
+//    var selectionImage: UIImage!
+//    var discName: String!
+//    var discDescription: String!
     
-    var selection: UIImage!
-
+    var disc : Discs?
+    
     @IBOutlet weak var Imagedetails: UIImageView!
+    @IBOutlet weak var discNameLabel: UILabel!
+    @IBOutlet weak var discDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       Imagedetails.image = selection
+    view.setGradientBackground(colorOne: UIColor.flatLime(), colorTwo: UIColor.flatSkyBlue())
+    imageViewHeightConstraint.constant = view.frame.width
+    
+        if let disc = disc {
+            navigationItem.title = disc.name
+            Imagedetails.image = disc.image
+            discNameLabel.text = disc.name
+            discDescriptionLabel.text = disc.description
+            
+            
+            
+            print("Type: \(disc.name)")
+        }
+        
+        
+        
+//
+//        Imagedetails.image = selectionImage
+//    discNameLabel.text = discName
+//    discDescriptionLabel.text = discDescription
         
     }
 

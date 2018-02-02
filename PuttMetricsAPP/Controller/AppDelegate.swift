@@ -27,8 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.isIdleTimerDisabled = true
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        return true
+       
         
+        
+        
+        
+        NSSetUncaughtExceptionHandler { exception in
+            
+            print(exception)
+            
+            print(exception.callStackSymbols)
+            
+        }
+         return true
     }
 
 

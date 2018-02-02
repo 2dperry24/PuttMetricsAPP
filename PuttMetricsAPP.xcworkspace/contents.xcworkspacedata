@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Controller/CollectViewImages+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/User/Desktop/AppProjects/PuttMetricsAPP/PuttMetricsAPP/Controller/CollectViewImages+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:PuttMetricsAPP.xcodeproj">
    </FileRef>
    <FileRef
