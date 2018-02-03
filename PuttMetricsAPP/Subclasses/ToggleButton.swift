@@ -1,4 +1,4 @@
-//
+
 //  ToggleButton.swift
 //  PuttMetricsAPP
 //
@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 
 class ToggleButton: UIButton {
-
-   
+    
+    
     var isOn = false
     
     override init(frame: CGRect) {
@@ -28,10 +27,10 @@ class ToggleButton: UIButton {
     func initButton() {
         
         layer.borderWidth = 2.0
-        layer.borderColor = UIColor.flatMintColorDark().cgColor
+        layer.borderColor = UIColor.green.cgColor
         layer.cornerRadius = frame.size.height/2
         
-        setTitleColor(UIColor.flatMintColorDark(), for: .normal)
+        setTitleColor(UIColor.green, for: .normal)
         addTarget(self, action: #selector(ToggleButton.buttonPressed), for: .touchUpInside)
     }
     
@@ -41,9 +40,9 @@ class ToggleButton: UIButton {
     func activateButton(bool: Bool){
         isOn = bool
         
-        let color = bool ? UIColor.flatMintColorDark() : .clear
+        let color = bool ? UIColor.green : .clear
         let title = bool ? "Following" : "Follow"
-        let titleColor = bool ? .white : UIColor.flatMintColorDark()
+        let titleColor = bool ? .white : UIColor.green
         
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
@@ -70,7 +69,7 @@ class RoundedEdgesTallButton: UIButton {
     func initButton() {
         layer.cornerRadius = frame.size.width/2
     }
-   
+    
     
 }
 
@@ -94,10 +93,10 @@ class minusButton: UIButton {
         layer.cornerRadius = frame.size.height/2
         
         setTitleColor(UIColor.white, for: .normal)
-      
+        
     }
     
-
+    
 }
 
 class additionButton: UIButton {
@@ -125,49 +124,4 @@ class additionButton: UIButton {
     
     
 }
-//
-//class TotalScoreToggleButton: UIButton {
-//
-//    var isOn = false
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        initButton()
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        initButton()
-//    }
-//
-//    func initButton() {
-//        layer.borderWidth = 2.0
-//        layer.borderColor = UIColor.cyan as! CGColor
-//        layer.cornerRadius = frame.size.height/2
-//
-//        setTitleColor(UIColor.cyan, for: .normal)
-//        addTarget(self, action: #selector(TotalScoreButton.buttonPressed), for: .touchUpInside)
-//    }
-//
-//    func buttonPressed() {
-//        activateButton(bool: !isOn)
-//    }
-//
-//    func activateButton(bool: Bool) {
-//
-//        isOn = bool
-//
-//        let color = bool ? UIColor.cyan  : .clear
-//        let title = bool ? "Following" : "Follow"
-//        let titleColor = bool ? .white : UIColor.cyan
-//
-//        setTitle(title, for: .normal)
-//        setTitleColor(titleColor, for: .normal)
-//        backgroundColor = color
-//    }
-//
-//
-//}
-
-
 
