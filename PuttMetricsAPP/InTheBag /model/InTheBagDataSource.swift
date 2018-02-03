@@ -128,7 +128,7 @@ class CollectionViewDataSource {
                     let _discType = element.discType
                     let _imageId = element.id
                     let index = num
-                    let disc = Discs(_image: _imageData, _name: _imageName!, _description: _imageDescription!, _type: _discType!, _id: _imageId, _index: index)
+            let disc = Discs(_image: _imageData, _name: _imageName!, _description: _imageDescription!, _type: _discType!, _id: _imageId!, _index: index)
             
                     if !sections.contains(_discType!) {
                         sections.append(_discType!)
@@ -138,6 +138,7 @@ class CollectionViewDataSource {
             
             }
             discs = allDiscs
+            print("LOAD DISCS WAS CALLED")
             return allDiscs
         }
         return []

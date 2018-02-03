@@ -121,7 +121,7 @@ class PictureInfoVC: UIViewController {
     func prepareImageForSaving(image:UIImage, name: String, description: String, type: String) {
         
         // use date as unique id
-        let date : Double = NSDate().timeIntervalSince1970
+        let date : String = UUID().uuidString
         
         
         // create NSData from UIImage
@@ -133,15 +133,15 @@ class PictureInfoVC: UIViewController {
         
         
         
-        saveImage(imageData: imageData as NSData, date: date, name: name, description: description, type: type)
+        saveImage(imageData: imageData as NSData, id: date, name: name, description: description, type: type)
     }
 
     
-    func saveImage(imageData:NSData, date: Double, name: String, description: String, type: String) {
+    func saveImage(imageData:NSData, id: String, name: String, description: String, type: String) {
         
         
         let collectionImages = CollectViewImages(context: PersistenceService.context)
-        collectionImages.id = date
+        collectionImages.id = id
         collectionImages.imageData = imageData
         collectionImages.discName = name
         collectionImages.discDescription = description

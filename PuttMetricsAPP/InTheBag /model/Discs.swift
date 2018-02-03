@@ -7,10 +7,10 @@ class Discs {
 	var name: String
 	var description: String
     var type: String
-    var id: Double
+    var id: String
 	var index: Int
 	
-    init(_image: UIImage, _name: String, _description: String, _type: String, _id: Double, _index: Int) {
+    init(_image: UIImage, _name: String, _description: String, _type: String, _id: String, _index: Int) {
 		self.image = _image
         self.name = _name
 		self.description = _description
